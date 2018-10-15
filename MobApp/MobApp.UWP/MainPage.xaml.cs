@@ -1,17 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
-using Windows.UI.Xaml;
-using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
-using Windows.UI.Xaml.Input;
-using Windows.UI.Xaml.Media;
-using Windows.UI.Xaml.Navigation;
+﻿using Autofac;
+using Bit.ViewModel.Implementations;
+using Prism.Autofac;
+using Prism.Ioc;
 
 namespace MobApp.UWP
 {
@@ -19,9 +9,19 @@ namespace MobApp.UWP
     {
         public MainPage()
         {
-            this.InitializeComponent();
+            InitializeComponent();
 
-            LoadApplication(new MobApp.App());
+            LoadApplication(new MobApp.App(new MobAppPlatformInitializer()));
+        }
+    }
+
+    public class MobAppPlatformInitializer : BitPlatformInitializer
+    {
+        public override void RegisterTypes(IContainerRegistry containerRegistry)
+        {
+            ContainerBuilder containerBuilder = containerRegistry.GetBuilder();
+
+            base.RegisterTypes(containerRegistry);
         }
     }
 }

@@ -1,32 +1,65 @@
-﻿using System;
+﻿using Autofac;
+using Bit;
+using Bit.ViewModel.Contracts;
+using Bit.ViewModel.Implementations;
+using Prism;
+using Prism.Autofac;
+using Prism.Ioc;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Prism.Navigation;
+using MobApp.Views;
+using MobApp.ViewModels;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+
 namespace MobApp
 {
-    public partial class App : Application
+    public partial class App : BitApplication
     {
+        public new static App Current
+        {
+            get { return (App)Application.Current; }
+        }
+
         public App()
+            : this(null)
+        {
+        }
+
+        public App(IPlatformInitializer platformInitializer)
+            : base(platformInitializer)
+        {
+#if DEBUG
+            LiveReload.Init();
+#endif
+        }
+
+        protected async override Task OnInitializedAsync()
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            await NavigationService.NavigateAsync("/Nav/HelloWorld", animated: false);
+
+            await base.OnInitializedAsync();
         }
 
-        protected override void OnStart()
+        protected override void RegisterTypes(IContainerRegistry containerRegistry)
         {
-            // Handle when your app starts
-        }
+            ContainerBuilder containerBuilder = containerRegistry.GetBuilder();
 
-        protected override void OnSleep()
-        {
-            // Handle when your app sleeps
-        }
+            containerRegistry.RegisterForNav<NavigationPage>("Nav");
+            containerRegistry.RegisterForNav<HelloWorldView, HelloWorldViewModel>("HelloWorld");
 
-        protected override void OnResume()
-        {
-            // Handle when your app resumes
+            containerBuilder.Register<IClientAppProfile>(c => new DefaultClientAppProfile
+            {
+                AppName = "MobApp",
+            }).SingleInstance();
+
+            containerBuilder.RegisterRequiredServices();
+
+            base.RegisterTypes(containerRegistry);
         }
     }
 }

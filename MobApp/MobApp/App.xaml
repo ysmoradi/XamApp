@@ -1,8 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<Application xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MobApp.App">
-    <Application.Resources>
-
-    </Application.Resources>
-</Application>
+<bit:BitApplication
+    x:Class="MobApp.App"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:bit="clr-namespace:Bit;assembly=Bit.CSharpClient.Prism" />
