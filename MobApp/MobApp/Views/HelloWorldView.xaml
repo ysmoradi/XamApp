@@ -3,11 +3,9 @@
     x:Class="MobApp.Views.HelloWorldView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:viewModels="clr-namespace:MobApp.ViewModels"
-    Title="Hello World!"
-    x:DataType="viewModels:HelloWorldViewModel">
-    <StackLayout>
-        <Label Text="{Binding StepsCount}" />
-        <Button Command="{Binding IncreaseStepsCountCommand}" Text="Increase steps count" />
+    Title="Hello World!">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding StepsCount, StringFormat='{}Button tapped {0} times!'}" />
+        <Button Command="{Binding IncreaseStepsCountCommand}" Text="+" />
     </StackLayout>
 </ContentPage>

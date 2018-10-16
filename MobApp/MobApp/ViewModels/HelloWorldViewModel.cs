@@ -16,7 +16,7 @@ namespace MobApp.ViewModels
 
         async Task IncreaseStepsCount()
         {
-            StepsCount += 1000;
+            StepsCount += 1;
         }
     }
 }
