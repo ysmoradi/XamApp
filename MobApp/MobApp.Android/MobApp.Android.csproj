@@ -49,6 +49,9 @@
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidLinkMode>Full</AndroidLinkMode>
     <AndroidAotAdditionalArguments>no-write-symbols,nodebug</AndroidAotAdditionalArguments>
+    <!--<AndroidAotMode>Full</AndroidAotMode>-->
+    <!--<AndroidAotMode>Hybrid</AndroidAotMode>-->
+    <!--<AndroidAotMode>Normal</AndroidAotMode>-->
     <AndroidSupportedAbis />
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <AotAssemblies>false</AotAssemblies>
