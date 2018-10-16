@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobApp.Android", "MobApp\MobApp.Android\MobApp.Android.csproj", "{FEB3DE00-56BA-4E36-8B8C-D7DEE521A83E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobApp.Android", "src\MobApp.Android\MobApp.Android.csproj", "{FEB3DE00-56BA-4E36-8B8C-D7DEE521A83E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobApp.iOS", "MobApp\MobApp.iOS\MobApp.iOS.csproj", "{B4AA91E3-7443-4831-A99E-A0E15CDB1C9C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobApp.iOS", "src\MobApp.iOS\MobApp.iOS.csproj", "{B4AA91E3-7443-4831-A99E-A0E15CDB1C9C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobApp.UWP", "MobApp\MobApp.UWP\MobApp.UWP.csproj", "{647E2A15-DC23-447C-B88C-56D7EA540D37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobApp.UWP", "src\MobApp.UWP\MobApp.UWP.csproj", "{647E2A15-DC23-447C-B88C-56D7EA540D37}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobApp", "MobApp\MobApp\MobApp.csproj", "{A17F3218-446D-4568-BED2-6E2BD8593D35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobApp", "src\MobApp\MobApp.csproj", "{A17F3218-446D-4568-BED2-6E2BD8593D35}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
