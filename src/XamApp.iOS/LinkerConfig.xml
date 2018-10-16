@@ -57,6 +57,9 @@
   <!-- Bit.CSharpClient.OData -->
 
   <!-- 
+  <assembly fullname="Bit.CSharpClient.OData">
+    <type fullname="*" />
+  </assembly>
   <assembly fullname="Simple.OData.Client.V4.Adapter">
     <type fullname="*" />
   </assembly>
@@ -65,7 +68,18 @@
   <!-- Bit.CSharpClient.Sync -->
 
   <!-- 
+  <assembly fullname="Bit.CSharpClient.Sync">
+    <type fullname="*" />
+  </assembly>
   <assembly fullname="System.Linq.Dynamic">
+    <type fullname="*" />
+  </assembly>
+  -->
+
+  <!-- Bit.CSharpClient.Rest -->
+
+  <!--
+  <assembly fullname="Bit.CSharpClient.Rest">
     <type fullname="*" />
   </assembly>
   -->
