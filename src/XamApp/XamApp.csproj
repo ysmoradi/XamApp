@@ -11,7 +11,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Bit.CSharpClient.Prism" Version="1.1.37" />
+    <PackageReference Include="Bit.CSharpClient.Prism" Version="1.1.38" />
     <PackageReference Include="BitCodeAnalyzer" Version="1.3.4" />
     <PackageReference Include="Fody" Version="3.2.9">
       <PrivateAssets>all</PrivateAssets>
