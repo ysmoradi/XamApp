@@ -1,8 +1,9 @@
 ﻿using Bit.ViewModel;
-using XamApp.Implementations;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Navigation;
+using XamApp.Implementations;
 using Xamarin.Essentials;
 
 namespace XamApp.UWP
@@ -19,6 +20,7 @@ namespace XamApp.UWP
         public App()
         {
             InitializeComponent();
+            UnhandledException += App_UnhandledException;
         }
 
         protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -26,6 +28,8 @@ namespace XamApp.UWP
             if (!(Window.Current.Content is Frame rootFrame))
             {
                 rootFrame = new Frame();
+
+                rootFrame.NavigationFailed += OnNavigationFailed;
 
                 Rg.Plugins.Popup.Popup.Init();
 
@@ -40,6 +44,18 @@ namespace XamApp.UWP
             }
 
             Window.Current.Activate();
+        }
+
+        void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
+        {
+            e.Handled = true;
+            BitExceptionHandler.Current.OnExceptionReceived(e.Exception);
+        }
+
+        void OnNavigationFailed(object sender, NavigationFailedEventArgs e)
+        {
+            BitExceptionHandler.Current.OnExceptionReceived(e.Exception);
+            e.Handled = true;
         }
     }
 }
