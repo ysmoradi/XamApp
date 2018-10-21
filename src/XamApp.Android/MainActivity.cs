@@ -13,7 +13,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace XamApp.Droid
 {
-    [Activity(Label = "XamApp", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "XamApp", Icon = "@mipmap/icon", Theme = "@style/SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -24,6 +24,8 @@ namespace XamApp.Droid
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+
+            SetTheme(Resource.Style.MainTheme);
 
             base.OnCreate(bundle);
 
