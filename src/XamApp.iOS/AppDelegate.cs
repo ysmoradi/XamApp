@@ -21,6 +21,8 @@ namespace XamApp.iOS
 
             VersionTracking.Track();
 
+            Rg.Plugins.Popup.Popup.Init();
+
             Forms.Init();
 
             LoadApplication(new App(new XamAppPlatformInitializer()));
