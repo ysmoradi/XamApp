@@ -5,12 +5,12 @@ using Bit.ViewModel.Implementations;
 using Prism;
 using Prism.Autofac;
 using Prism.Ioc;
+using Prism.Navigation;
 using System.Threading.Tasks;
+using XamApp.ViewModels;
+using XamApp.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Prism.Navigation;
-using XamApp.Views;
-using XamApp.ViewModels;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
@@ -40,7 +40,7 @@ namespace XamApp
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("/Nav/HelloWorld", animated: false);
+            await NavigationService.NavigateAsync("/Login", animated: false);
 
             await base.OnInitializedAsync();
         }
@@ -51,6 +51,7 @@ namespace XamApp
 
             containerRegistry.RegisterForNav<NavigationPage>("Nav");
             containerRegistry.RegisterForNav<HelloWorldView, HelloWorldViewModel>("HelloWorld");
+            containerRegistry.RegisterForNav<LoginView, LoginViewModel>("Login");
 
             containerBuilder.Register<IClientAppProfile>(c => new DefaultClientAppProfile
             {
