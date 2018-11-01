@@ -40,7 +40,8 @@ namespace XamApp
         {
             InitializeComponent();
 
-            await NavigationService.NavigateAsync("/Login", animated: false);
+            // await NavigationService.NavigateAsync("/Login", animated: false);
+            await NavigationService.NavigateAsync("/Nav/HelloWorld", animated: false);
 
             await base.OnInitializedAsync();
         }
