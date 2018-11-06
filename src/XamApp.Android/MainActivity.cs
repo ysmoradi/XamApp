@@ -2,36 +2,32 @@
 using Android.Content.PM;
 using Android.OS;
 using Autofac;
+using Bit.Droid;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
-using XamApp.Implementations;
 using Prism.Autofac;
 using Prism.Ioc;
-using Xamarin.Essentials;
+using XamApp.Implementations;
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.Android;
 
 namespace XamApp.Droid
 {
     [Activity(Label = "XamApp", Icon = "@mipmap/icon", Theme = "@style/SplashTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : FormsAppCompatActivity
+    public class MainActivity : BitFormsAppCompatActivity
     {
-        protected override void OnCreate(Bundle bundle)
+        protected override void OnCreate(Bundle savedInstanceState)
         {
             BitExceptionHandler.Current = new XamAppExceptionHandler();
-
-            VersionTracking.Track();
 
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
             SetTheme(Resource.Style.MainTheme);
 
-            base.OnCreate(bundle);
+            base.OnCreate(savedInstanceState);
 
-            Forms.SetFlags("FastRenderers_Experimental");
-            Rg.Plugins.Popup.Popup.Init(this, bundle);
-            Forms.Init(this, bundle);
+            UseDefaultConfiguration(savedInstanceState);
+            Forms.Init(this, savedInstanceState);
 
             LoadApplication(new App(new XamAppPlatformInitializer(this)));
         }

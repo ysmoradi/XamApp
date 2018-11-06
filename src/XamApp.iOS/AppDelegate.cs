@@ -1,28 +1,24 @@
 ﻿using Autofac;
+using Bit.iOS;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
 using Foundation;
-using XamApp.Implementations;
 using Prism.Autofac;
 using Prism.Ioc;
 using UIKit;
-using Xamarin.Essentials;
+using XamApp.Implementations;
 using Xamarin.Forms;
-using Xamarin.Forms.Platform.iOS;
 
 namespace XamApp.iOS
 {
     [Register(nameof(AppDelegate))]
-    public partial class AppDelegate : FormsApplicationDelegate
+    public partial class AppDelegate : BitFormsApplicationDelegate
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             BitExceptionHandler.Current = new XamAppExceptionHandler();
 
-            VersionTracking.Track();
-
-            Rg.Plugins.Popup.Popup.Init();
-
+            UseDefaultConfiguration();
             Forms.Init();
 
             LoadApplication(new App(new XamAppPlatformInitializer()));
