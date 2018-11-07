@@ -54,6 +54,7 @@ namespace XamApp
             containerRegistry.RegisterForNav<NavigationPage>("Nav");
             containerRegistry.RegisterForNav<HelloWorldView, HelloWorldViewModel>("HelloWorld");
             containerRegistry.RegisterForNav<LoginView, LoginViewModel>("Login");
+            containerRegistry.RegisterForNav<IntroView, IntroViewModel>("Intro");
 
             containerBuilder.Register<IClientAppProfile>(c => new DefaultClientAppProfile
             {

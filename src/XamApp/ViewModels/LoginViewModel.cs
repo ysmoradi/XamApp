@@ -28,9 +28,10 @@ namespace XamApp.ViewModels
             using (UserDialogs.Loading("Logging in...", maskType: MaskType.Black))
             {
                 // Login implementation ...
-                await Task.Delay(TimeSpan.FromMilliseconds(3));
+                await Task.Delay(TimeSpan.FromSeconds(3));
             }
 
+            await NavigationService.NavigateAsync("/Intro");
             await NavigationService.NavigateAsync("/Nav/HelloWorld");
         }
     }
