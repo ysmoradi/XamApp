@@ -32,7 +32,8 @@ namespace XamApp.ViewModels
             }
 
             await NavigationService.NavigateAsync("/Intro");
-            await NavigationService.NavigateAsync("/Nav/HelloWorld");
+            //await NavigationService.NavigateAsync("/Nav/HelloWorld");
+            await NavigationService.NavigateAsync("/MasterDetail/Nav/HelloWorld");
         }
     }
 }

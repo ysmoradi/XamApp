@@ -52,6 +52,7 @@ namespace XamApp
             ContainerBuilder containerBuilder = containerRegistry.GetBuilder();
 
             containerRegistry.RegisterForNav<NavigationPage>("Nav");
+            containerRegistry.RegisterForNav<XamAppMasterDetailView, XamAppMasterDetailViewModel>("MasterDetail");
             containerRegistry.RegisterForNav<HelloWorldView, HelloWorldViewModel>("HelloWorld");
             containerRegistry.RegisterForNav<LoginView, LoginViewModel>("Login");
             containerRegistry.RegisterForNav<IntroView, IntroViewModel>("Intro");
