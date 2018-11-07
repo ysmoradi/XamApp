@@ -1,4 +1,5 @@
-﻿using Autofac;
+﻿using Acr.UserDialogs;
+using Autofac;
 using Bit;
 using Bit.ViewModel.Contracts;
 using Bit.ViewModel.Implementations;
@@ -60,6 +61,8 @@ namespace XamApp
             }).SingleInstance();
 
             containerBuilder.RegisterRequiredServices();
+
+            containerBuilder.RegisterInstance(UserDialogs.Instance);
 
             base.RegisterTypes(containerRegistry);
         }

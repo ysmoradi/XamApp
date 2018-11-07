@@ -1,4 +1,6 @@
-﻿using Bit.ViewModel;
+﻿using Acr.UserDialogs;
+using Bit.ViewModel;
+using System;
 using System.Threading.Tasks;
 
 namespace XamApp.ViewModels
@@ -16,9 +18,20 @@ namespace XamApp.ViewModels
             LoginCommand = new BitDelegateCommand(Login);
         }
 
+        public IUserDialogs UserDialogs { get; set; }
+
         public async Task Login()
         {
-            // Login implementation ...
+            if (string.IsNullOrWhiteSpace(UserName) || string.IsNullOrWhiteSpace(Password))
+                await UserDialogs.AlertAsync(message: "Please provide UserName and Password!", title: ")-:", okText: "Ok!");
+
+            using (UserDialogs.Loading("Logging in...", maskType: MaskType.Black))
+            {
+                // Login implementation ...
+                await Task.Delay(TimeSpan.FromMilliseconds(3));
+            }
+
+            await NavigationService.NavigateAsync("/Nav/HelloWorld");
         }
     }
 }

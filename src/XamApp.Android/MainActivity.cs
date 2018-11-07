@@ -1,4 +1,5 @@
-﻿using Android.App;
+﻿using Acr.UserDialogs;
+using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Autofac;
@@ -27,6 +28,7 @@ namespace XamApp.Droid
             base.OnCreate(savedInstanceState);
 
             UseDefaultConfiguration(savedInstanceState);
+            UserDialogs.Init(this);
             Forms.Init(this, savedInstanceState);
 
             LoadApplication(new App(new XamAppPlatformInitializer(this)));
