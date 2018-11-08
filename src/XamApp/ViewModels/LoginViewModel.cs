@@ -23,7 +23,10 @@ namespace XamApp.ViewModels
         public async Task Login()
         {
             if (string.IsNullOrWhiteSpace(UserName) || string.IsNullOrWhiteSpace(Password))
+            {
                 await UserDialogs.AlertAsync(message: "Please provide UserName and Password!", title: ")-:", okText: "Ok!");
+                return;
+            }
 
             using (UserDialogs.Loading("Logging in...", maskType: MaskType.Black))
             {
