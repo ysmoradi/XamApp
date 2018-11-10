@@ -1,13 +1,43 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    
+    <TargetFrameworks>MonoAndroid81;Xamarin.iOS10;uap10.0.16299;netstandard2.0;netcoreapp2.0;</TargetFrameworks>
     <LangVersion>7.2</LangVersion>
-  </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <DebugType>pdbonly</DebugType>
     <DebugSymbols>true</DebugSymbols>
+
+    <DefineConstants Condition=" '$(TargetFramework)' == 'MonoAndroid81' ">Android</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFramework)' == 'Xamarin.iOS10' ">iOS</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFramework)' == 'netcoreapp2.0' ">DotNetCore</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFramework)' == 'uap10.0.16299' ">UWP</DefineConstants>
+    <DefineConstants Condition=" '$(TargetFramework)' == 'netstandard2.0' ">DotNetStandard</DefineConstants>
+    <DocumentationFile>bin\$(Configuration)\$(TargetFramework)\$(AssemblyName).xml</DocumentationFile>
+    <NoWarn>$(NoWarn);NU1605;CS1591;</NoWarn>
+
+    <!-- Nuget Configuration -->
+    <GeneratePackageOnBuild Condition=" '$(Configuration)' == 'Release' ">true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Test</Authors>
+    <Company>Test</Company>
+    <Product>Test</Product>
+    <Description>Test</Description>
+    <Copyright>Copyright © Test 2018</Copyright>
+    <PackageLicenseUrl>https://github.com/</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/</PackageProjectUrl>
+    <PackageIconUrl>https://avatars.githubusercontent.com/u/22663390</PackageIconUrl>
+    <RepositoryUrl>https://github.com/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Test</PackageTags>
+    <PackageReleaseNotes>https://github.com/</PackageReleaseNotes>
+    <!-- Nuget Configuration -->
+
+    <!-- Version -->
+    <AssemblyVersion>0.0.0.1</AssemblyVersion>
+    <FileVersion>0.0.0.1</FileVersion>
+    <Version>0.0.1</Version>
+    <!-- Version -->
+    
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,6 +52,9 @@
     <PackageReference Include="Xamarin.Forms" Version="3.3.0.967583" />
     <PackageReference Condition=" '$(Configuration)' == 'Debug' " Include="Xamarin.LiveReload" Version="0.3.27" />
     <PackageReference Condition=" '$(Configuration)' == 'Debug' " Include="LiveXAML" Version="2.1.45" />
+    <PackageReference Include="MSBuild.Sdk.Extras" Version="1.6.61" PrivateAssets="All" />
   </ItemGroup>
+
+  <Import Project="$(MSBuildSDKExtrasTargets)" Condition="Exists('$(MSBuildSDKExtrasTargets)')" />
 
 </Project>
