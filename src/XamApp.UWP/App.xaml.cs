@@ -16,7 +16,6 @@ namespace XamApp.UWP
         public App()
         {
             InitializeComponent();
-            UnhandledException += App_UnhandledException; // ToDo: Remove this line.
         }
 
         protected override void OnLaunched(LaunchActivatedEventArgs e)
@@ -37,12 +36,6 @@ namespace XamApp.UWP
             }
 
             Window.Current.Activate();
-        }
-
-        private void App_UnhandledException(object sender, UnhandledExceptionEventArgs e)
-        {
-            e.Handled = true;
-            BitExceptionHandler.Current.OnExceptionReceived(e.Exception);
         }
     }
 }
