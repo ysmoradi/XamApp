@@ -1,4 +1,6 @@
 ﻿using Bit.ViewModel;
+using System.Linq;
+using System.Reflection;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
@@ -25,7 +27,10 @@ namespace XamApp.UWP
                 rootFrame = new Frame();
 
                 UseDefaultConfiguration();
-                Xamarin.Forms.Forms.Init(e);
+                Xamarin.Forms.Forms.Init(e, new Assembly[]
+                {
+
+                }.Union(Rg.Plugins.Popup.Popup.GetExtraAssemblies()));
 
                 Window.Current.Content = rootFrame;
             }
