@@ -50,9 +50,6 @@
   <assembly fullname="Bit.CSharpClient.Prism">
     <type fullname="*" />
   </assembly>
-  <assembly fullname="Rg.Plugins.Popup">
-    <type fullname="*" />
-  </assembly>
 
   <!-- Bit.CSharpClient.OData -->
 
@@ -83,6 +80,17 @@
     <type fullname="*" />
   </assembly>
   -->
+  
+  <!-- Bit.CSharpClient.Controls -->
+
+  <assembly fullname="Rg.Plugins.Popup">
+    <type fullname="*" />
+  </assembly>
+  <assembly fullname="Bit.CSharpClient.Controls">
+    <type fullname="*" />
+  </assembly>
+  
+  <!-- App -->
 
   <assembly fullname="System.Core">
     <type fullname="*" />
@@ -94,6 +102,8 @@
     <type fullname="*" />
   </assembly>
 
+  <!-- Other -->
+  
   <assembly fullname="mscorlib">
     <type fullname="System.String">
       <method name="Compare"></method>

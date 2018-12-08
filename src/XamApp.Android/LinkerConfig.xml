@@ -52,9 +52,6 @@
   <assembly fullname="Bit.CSharpClient.Prism">
     <type fullname="*" />
   </assembly>
-  <assembly fullname="Rg.Plugins.Popup">
-    <type fullname="*" />
-  </assembly>
 
   <!-- Bit.CSharpClient.OData -->
 
@@ -86,13 +83,27 @@
   </assembly>
   -->
 
-  <assembly fullname="System.Core">
+  <!-- Bit.CSharpClient.Controls -->
+
+  <assembly fullname="Rg.Plugins.Popup">
     <type fullname="*" />
   </assembly>
+  <assembly fullname="Bit.CSharpClient.Controls">
+    <type fullname="*" />
+  </assembly>
+
+  <!-- App -->
+
   <assembly fullname="XamApp.Android">
     <type fullname="*" />
   </assembly>
   <assembly fullname="XamApp">
+    <type fullname="*" />
+  </assembly>
+  
+  <!-- Other -->
+
+  <assembly fullname="System.Core">
     <type fullname="*" />
   </assembly>
 

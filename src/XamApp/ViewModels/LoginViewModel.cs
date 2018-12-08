@@ -34,7 +34,7 @@ namespace XamApp.ViewModels
                 await Task.Delay(TimeSpan.FromSeconds(3));
             }
 
-            await NavigationService.NavigateAsync("/Intro");
+            //await NavigationService.NavigateAsync("/Intro");
             //await NavigationService.NavigateAsync("/Nav/HelloWorld");
             await NavigationService.NavigateAsync("/MasterDetail/Nav/HelloWorld");
         }
