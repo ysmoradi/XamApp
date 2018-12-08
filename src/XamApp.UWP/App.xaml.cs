@@ -1,10 +1,13 @@
-﻿using Bit.ViewModel;
+﻿using Bit;
+using Bit.ViewModel;
+using Syncfusion.ListView.XForms.UWP;
 using System.Linq;
 using System.Reflection;
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using XamApp.Implementations;
+using XamApp.Views;
 
 namespace XamApp.UWP
 {
@@ -12,6 +15,8 @@ namespace XamApp.UWP
     {
         static App()
         {
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(SyncfusionLicense.Product_Key);
+
             BitExceptionHandler.Current = new XamAppExceptionHandler();
         }
 
@@ -27,9 +32,13 @@ namespace XamApp.UWP
                 rootFrame = new Frame();
 
                 UseDefaultConfiguration();
+
+                BitCSharpClientControls.Init();
+
                 Xamarin.Forms.Forms.Init(e, new Assembly[]
                 {
-
+                    typeof(BitCSharpClientControls).GetTypeInfo().Assembly,
+                    typeof(SfListViewRenderer).GetTypeInfo().Assembly
                 }.Union(Rg.Plugins.Popup.Popup.GetExtraAssemblies()));
 
                 Window.Current.Content = rootFrame;

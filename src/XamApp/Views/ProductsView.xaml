@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamApp.Views.ProductsView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:bit="clr-namespace:Bit.View;assembly=Bit.CSharpClient.Prism"
+    xmlns:bitControls="clr-namespace:Bit.CSharpClient.Controls;assembly=Bit.CSharpClient.Controls"
+    xmlns:model="clr-namespace:XamApp.Models"
+    xmlns:sfListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
+    xmlns:vm="clr-namespace:XamApp.ViewModels"
+    Title="Products"
+    x:DataType="vm:ProductsViewModel">
+    <sfListView:SfListView Padding="3" ItemsSource="{Binding Products}">
+        <sfListView:SfListView.ItemTemplate>
+            <DataTemplate>
+                <FlexLayout x:DataType="model:Product" Direction="Row">
+                    <Label
+                        FlexLayout.Basis="40%"
+                        Text="{Binding Name}"
+                        VerticalTextAlignment="Center" />
+                    <bitControls:BitCheckbox
+                        FlexLayout.Basis="20%"
+                        InputTransparent="True"
+                        IsChecked="{Binding IsActive}" />
+                    <Label
+                        FlexLayout.Basis="20%"
+                        Text="{Binding Price}"
+                        VerticalTextAlignment="Center" />
+                    <Button
+                        Command="{bit:ViewModelBinding ShowProductDetailsCommand}"
+                        CommandParameter="{Binding .}"
+                        FlexLayout.Basis="20%"
+                        Text="Detail..." />
+                </FlexLayout>
+            </DataTemplate>
+        </sfListView:SfListView.ItemTemplate>
+    </sfListView:SfListView>
+</ContentPage>

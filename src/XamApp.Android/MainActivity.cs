@@ -3,12 +3,14 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Autofac;
+using Bit;
 using Bit.Droid;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
 using Prism.Autofac;
 using Prism.Ioc;
 using XamApp.Implementations;
+using XamApp.Views;
 using Xamarin.Forms;
 
 namespace XamApp.Droid
@@ -20,6 +22,8 @@ namespace XamApp.Droid
         {
             BitExceptionHandler.Current = new XamAppExceptionHandler();
 
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(SyncfusionLicense.Product_Key);
+
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
 
@@ -30,6 +34,8 @@ namespace XamApp.Droid
             UseDefaultConfiguration(savedInstanceState);
             UserDialogs.Init(this);
             Forms.Init(this, savedInstanceState);
+
+            BitCSharpClientControls.Init();
 
             LoadApplication(new App(new XamAppPlatformInitializer(this)));
         }

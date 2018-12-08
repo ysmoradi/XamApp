@@ -1,12 +1,15 @@
 ﻿using Autofac;
+using Bit;
 using Bit.iOS;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
 using Foundation;
 using Prism.Autofac;
 using Prism.Ioc;
+using Syncfusion.ListView.XForms.iOS;
 using UIKit;
 using XamApp.Implementations;
+using XamApp.Views;
 using Xamarin.Forms;
 
 namespace XamApp.iOS
@@ -18,8 +21,13 @@ namespace XamApp.iOS
         {
             BitExceptionHandler.Current = new XamAppExceptionHandler();
 
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(SyncfusionLicense.Product_Key);
+
             UseDefaultConfiguration();
             Forms.Init();
+
+            SfListViewRenderer.Init();
+            BitCSharpClientControls.Init();
 
             LoadApplication(new App(new XamAppPlatformInitializer()));
 
