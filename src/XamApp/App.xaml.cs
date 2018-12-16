@@ -7,7 +7,9 @@ using Prism;
 using Prism.Autofac;
 using Prism.Ioc;
 using Prism.Navigation;
+using System.Globalization;
 using System.Threading.Tasks;
+using XamApp.Resources;
 using XamApp.ViewModels;
 using XamApp.Views;
 using Xamarin.Forms;
@@ -41,6 +43,8 @@ namespace XamApp
         {
             InitializeComponent();
 
+            Strings.Culture = CultureInfo.CurrentUICulture = new CultureInfo("en");
+
             // await NavigationService.NavigateAsync("/Login", animated: false);
             await NavigationService.NavigateAsync("/Nav/HelloWorld", animated: false);
 
@@ -54,6 +58,7 @@ namespace XamApp
             containerRegistry.RegisterForNav<NavigationPage>("Nav");
             containerRegistry.RegisterForNav<XamAppMasterDetailView, XamAppMasterDetailViewModel>("MasterDetail");
             containerRegistry.RegisterForNav<HelloWorldView, HelloWorldViewModel>("HelloWorld");
+            containerRegistry.RegisterForNav<HelloWorldMultiLanguageView, HelloWorldViewModel>("HelloWorldMultiLanguage");
             containerRegistry.RegisterForNav<LoginView, LoginViewModel>("Login");
             containerRegistry.RegisterForNav<IntroView, IntroViewModel>("Intro");
             containerRegistry.RegisterForNav<ProductsView, ProductsViewModel>("Products");

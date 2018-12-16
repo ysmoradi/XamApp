@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamApp.Views.HelloWorldMultiLanguageView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:resx="clr-namespace:XamApp.Resources"
+    Title="{x:Static resx:Strings.HelloWorld}">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding StepsCount, StringFormat={x:Static resx:Strings.ButtonTappedCount}}" />
+        <Button Command="{Binding IncreaseStepsCountCommand}" Text="+" />
+    </StackLayout>
+</ContentPage>
