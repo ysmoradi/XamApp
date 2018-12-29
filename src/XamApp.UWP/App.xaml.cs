@@ -1,5 +1,8 @@
 ﻿using Bit;
 using Bit.ViewModel;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 using Syncfusion.ListView.XForms.UWP;
 using System.Linq;
 using System.Reflection;
@@ -15,9 +18,11 @@ namespace XamApp.UWP
     {
         static App()
         {
-            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(SyncfusionLicense.Product_Key);
+            AppCenter.Start("3d9d3c01-e9d8-4251-a578-aa57f8f98d5e", typeof(Crashes), typeof(Analytics));
 
             BitExceptionHandler.Current = new XamAppExceptionHandler();
+
+            Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(SyncfusionLicense.Product_Key);
         }
 
         public App()
