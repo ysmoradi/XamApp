@@ -1,5 +1,4 @@
 ﻿using Autofac;
-using Bit;
 using Bit.iOS;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
@@ -32,7 +31,6 @@ namespace XamApp.iOS
             Forms.Init();
 
             SfListViewRenderer.Init();
-            BitCSharpClientControls.Init();
 
             LoadApplication(new App(new XamAppPlatformInitializer()));
 

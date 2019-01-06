@@ -3,7 +3,6 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Autofac;
-using Bit;
 using Bit.Droid;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
@@ -39,8 +38,6 @@ namespace XamApp.Droid
             UseDefaultConfiguration(savedInstanceState);
             UserDialogs.Init(this);
             Forms.Init(this, savedInstanceState);
-
-            BitCSharpClientControls.Init();
 
             LoadApplication(new App(new XamAppPlatformInitializer(this)));
         }

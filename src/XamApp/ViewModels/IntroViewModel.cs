@@ -1,8 +1,6 @@
-﻿using Bit.ViewModel;
-
-namespace XamApp.ViewModels
+﻿namespace XamApp.ViewModels
 {
-    public class IntroViewModel : BitViewModelBase
+    public class IntroViewModel : XamAppViewModelBase
     {
     }
 }

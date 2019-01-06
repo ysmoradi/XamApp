@@ -1,5 +1,4 @@
-﻿using Bit;
-using Bit.ViewModel;
+﻿using Bit.ViewModel;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
@@ -38,13 +37,10 @@ namespace XamApp.UWP
 
                 UseDefaultConfiguration();
 
-                BitCSharpClientControls.Init();
-
                 Xamarin.Forms.Forms.Init(e, new Assembly[]
                 {
-                    typeof(BitCSharpClientControls).GetTypeInfo().Assembly,
                     typeof(SfListViewRenderer).GetTypeInfo().Assembly
-                }.Union(Rg.Plugins.Popup.Popup.GetExtraAssemblies()));
+                }.Union(GetBitRendererAssemblies()));
 
                 Window.Current.Content = rootFrame;
             }
