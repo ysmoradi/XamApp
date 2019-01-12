@@ -62,6 +62,7 @@ namespace XamApp
             containerRegistry.RegisterForNav<LoginView, LoginViewModel>("Login");
             containerRegistry.RegisterForNav<IntroView, IntroViewModel>("Intro");
             containerRegistry.RegisterForNav<ProductsView, ProductsViewModel>("Products");
+            containerRegistry.RegisterForNav<PlatformSpecificSamplesView, PlatformSpecificSamplesViewModel>("PlatformSpecificSamples");
 
             containerBuilder.Register<IClientAppProfile>(c => new DefaultClientAppProfile
             {

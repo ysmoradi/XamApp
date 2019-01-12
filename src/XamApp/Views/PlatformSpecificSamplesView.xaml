@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamApp.Views.PlatformSpecificSamplesView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout>
+        <Button Command="{Binding ShowAppVersionCommand}" Text="Show app version" />
+        <Button Command="{Binding ShowSomeAlertToAndroidPhoneUsersOnlyCommand}" Text="Show some alert to android phone users only" />
+        <Label LineBreakMode="WordWrap" Text="Following entry has a clear button in iOS only, because of XamAppEntryRenderer class in Renderers folder XamApp.iOS project." />
+        <Entry Placeholder="Type here..." />
+    </StackLayout>
+</ContentPage>

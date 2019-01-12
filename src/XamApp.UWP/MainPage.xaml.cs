@@ -3,6 +3,8 @@ using Bit.ViewModel.Implementations;
 using Prism.Autofac;
 using Prism.Ioc;
 using Syncfusion.ListView.XForms.UWP;
+using XamApp.Contracts;
+using XamApp.UWP.Implementations;
 
 namespace XamApp.UWP
 {
@@ -23,6 +25,10 @@ namespace XamApp.UWP
         public override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             ContainerBuilder containerBuilder = containerRegistry.GetBuilder();
+
+            containerBuilder.RegisterType<UWPAppVersionService>()
+                .As<IAppVersionService>()
+                .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues);
 
             base.RegisterTypes(containerRegistry);
         }

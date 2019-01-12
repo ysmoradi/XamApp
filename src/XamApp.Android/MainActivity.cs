@@ -11,6 +11,8 @@ using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Prism.Autofac;
 using Prism.Ioc;
+using XamApp.Contracts;
+using XamApp.Droid.Implementations;
 using XamApp.Implementations;
 using XamApp.Views;
 using Xamarin.Forms;
@@ -53,6 +55,10 @@ namespace XamApp.Droid
         public override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             ContainerBuilder containerBuilder = containerRegistry.GetBuilder();
+
+            containerBuilder.RegisterType<AndroidAppVersionService>()
+                .As<IAppVersionService>()
+                .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues);
 
             base.RegisterTypes(containerRegistry);
         }

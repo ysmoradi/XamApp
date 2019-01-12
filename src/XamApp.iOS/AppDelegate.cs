@@ -10,7 +10,9 @@ using Prism.Autofac;
 using Prism.Ioc;
 using Syncfusion.ListView.XForms.iOS;
 using UIKit;
+using XamApp.Contracts;
 using XamApp.Implementations;
+using XamApp.iOS.Implementations;
 using XamApp.Views;
 using Xamarin.Forms;
 
@@ -43,6 +45,10 @@ namespace XamApp.iOS
         public override void RegisterTypes(IContainerRegistry containerRegistry)
         {
             ContainerBuilder containerBuilder = containerRegistry.GetBuilder();
+
+            containerBuilder.RegisterType<iOSAppVersionService>()
+                .As<IAppVersionService>()
+                .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues);
 
             base.RegisterTypes(containerRegistry);
         }
