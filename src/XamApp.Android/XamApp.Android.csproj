@@ -76,6 +76,15 @@
   </ItemGroup>
   <ItemGroup>
     <ProguardConfiguration Include="proguard_xamarin.cfg" />
+    <AndroidAsset Include="..\XamApp.UWP\Assets\Fonts\OpenSansBold.ttf">
+      <Link>Assets\Fonts\OpenSansBold.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\XamApp.UWP\Assets\Fonts\OpenSansItalic.ttf">
+      <Link>Assets\Fonts\OpenSansItalic.ttf</Link>
+    </AndroidAsset>
+    <AndroidAsset Include="..\XamApp.UWP\Assets\Fonts\OpenSansRegular.ttf">
+      <Link>Assets\Fonts\OpenSansRegular.ttf</Link>
+    </AndroidAsset>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -97,7 +106,6 @@
     <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Assets\" />
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\drawable-xxhdpi\" />

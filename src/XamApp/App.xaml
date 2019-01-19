@@ -3,20 +3,80 @@
     x:Class="XamApp.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:bit="clr-namespace:Bit;assembly=Bit.CSharpClient.Prism">
+    xmlns:bit="clr-namespace:Bit;assembly=Bit.CSharpClient.Prism"
+    xmlns:bitView="clr-namespace:Bit.View">
     <bit:BitApplication.Resources>
-        <ResourceDictionary>
-            <Style TargetType="StackLayout">
-                <Setter Property="Padding" Value="0" />
-            </Style>
-            <Style TargetType="Grid">
-                <Setter Property="RowSpacing" Value="0" />
-                <Setter Property="ColumnSpacing" Value="0" />
-            </Style>
-            <Style TargetType="Frame">
-                <Setter Property="Padding" Value="0" />
-                <Setter Property="BackgroundColor" Value="Transparent" />
-            </Style>
-        </ResourceDictionary>
+
+        <bitView:OnPlatform
+            x:Key="OpenSansRegular"
+            x:TypeArguments="x:String"
+            Value="{OnPlatform Android='Fonts/OpenSansRegular.ttf#Open Sans',
+                               iOS='OpenSans-Regular',
+                               UWP='Assets/Fonts/OpenSansRegular.ttf#Open Sans'}" />
+
+        <bitView:OnPlatform
+            x:Key="OpenSansBold"
+            x:TypeArguments="x:String"
+            Value="{OnPlatform Android='Fonts/OpenSansBold.ttf#Open Sans',
+                               iOS='OpenSans-Bold',
+                               UWP='Assets/Fonts/OpenSansBold.ttf#Open Sans'}" />
+
+        <bitView:OnPlatform
+            x:Key="OpenSansItalic"
+            x:TypeArguments="x:String"
+            Value="{OnPlatform Android='Fonts/OpenSansItalic.ttf#Open Sans',
+                               iOS='OpenSans-Italic',
+                               UWP='Assets/Fonts/OpenSansItalic.ttf#Open Sans'}" />
+
+        <Style TargetType="StackLayout">
+            <Setter Property="Spacing" Value="0" />
+        </Style>
+
+        <Style TargetType="Grid">
+            <Setter Property="RowSpacing" Value="0" />
+            <Setter Property="ColumnSpacing" Value="0" />
+        </Style>
+
+        <Style TargetType="Frame">
+            <Setter Property="Padding" Value="0" />
+            <Setter Property="BackgroundColor" Value="Transparent" />
+        </Style>
+
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+            <Style.Triggers>
+                <Trigger TargetType="Button" Property="FontAttributes" Value="Bold">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                </Trigger>
+                <Trigger TargetType="Button" Property="FontAttributes" Value="Italic">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+            <Style.Triggers>
+                <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                </Trigger>
+                <Trigger TargetType="Label" Property="FontAttributes" Value="Italic">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style TargetType="Entry">
+            <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+            <Style.Triggers>
+                <Trigger TargetType="Entry" Property="FontAttributes" Value="Bold">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                </Trigger>
+                <Trigger TargetType="Entry" Property="FontAttributes" Value="Italic">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
     </bit:BitApplication.Resources>
 </bit:BitApplication>
