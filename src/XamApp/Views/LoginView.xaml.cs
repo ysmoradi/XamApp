@@ -1,12 +1,10 @@
-﻿using Xamarin.Forms;
-
-namespace XamApp.Views
+﻿namespace XamApp.Views
 {
-	public partial class LoginView : ContentPage
-	{
-		public LoginView ()
-		{
-			InitializeComponent ();
-		}
-	}
+    public partial class LoginView
+    {
+        public LoginView()
+        {
+            InitializeComponent();
+        }
+    }
 }

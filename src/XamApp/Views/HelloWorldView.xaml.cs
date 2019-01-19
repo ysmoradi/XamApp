@@ -1,8 +1,6 @@
-﻿using Xamarin.Forms;
-
-namespace XamApp.Views
+﻿namespace XamApp.Views
 {
-    public partial class HelloWorldView : ContentPage
+    public partial class HelloWorldView
     {
         public HelloWorldView()
         {

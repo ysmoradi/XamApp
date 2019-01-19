@@ -1,8 +1,6 @@
-﻿using Xamarin.Forms;
-
-namespace XamApp.Views
+﻿namespace XamApp.Views
 {
-    public partial class XamAppMasterDetailView : MasterDetailPage
+    public partial class XamAppMasterDetailView
     {
         public XamAppMasterDetailView()
         {

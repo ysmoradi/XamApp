@@ -7,6 +7,7 @@ using Prism;
 using Prism.Autofac;
 using Prism.Ioc;
 using Prism.Navigation;
+using System;
 using System.Globalization;
 using System.Threading.Tasks;
 using XamApp.Resources;
@@ -16,6 +17,22 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
+
+namespace Bit.View
+{
+    public class OnPlatform<T>
+    {
+        public T Value { get; set; }
+
+        public static implicit operator T(OnPlatform<T> value)
+        {
+            if (value == null)
+                throw new ArgumentNullException(nameof(value));
+
+            return value.Value;
+        }
+    }
+}
 
 namespace XamApp
 {
