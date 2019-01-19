@@ -43,7 +43,6 @@
         </Style>
 
         <Style TargetType="Button">
-            <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
             <Style.Triggers>
                 <Trigger TargetType="Button" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -51,11 +50,13 @@
                 <Trigger TargetType="Button" Property="FontAttributes" Value="Italic">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
                 </Trigger>
+                <Trigger TargetType="Button" Property="FontAttributes" Value="None">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                </Trigger>
             </Style.Triggers>
         </Style>
 
         <Style TargetType="Label">
-            <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
             <Style.Triggers>
                 <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -63,17 +64,22 @@
                 <Trigger TargetType="Label" Property="FontAttributes" Value="Italic">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
                 </Trigger>
+                <Trigger TargetType="Label" Property="FontAttributes" Value="None">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                </Trigger>
             </Style.Triggers>
         </Style>
 
         <Style TargetType="Entry">
-            <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
             <Style.Triggers>
                 <Trigger TargetType="Entry" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
                 </Trigger>
                 <Trigger TargetType="Entry" Property="FontAttributes" Value="Italic">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                </Trigger>
+                <Trigger TargetType="Entry" Property="FontAttributes" Value="None">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
                 </Trigger>
             </Style.Triggers>
         </Style>
