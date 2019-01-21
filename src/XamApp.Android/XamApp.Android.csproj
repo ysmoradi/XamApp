@@ -85,6 +85,9 @@
     <AndroidAsset Include="..\XamApp.UWP\Assets\Fonts\OpenSansRegular.ttf">
       <Link>Assets\Fonts\OpenSansRegular.ttf</Link>
     </AndroidAsset>
+    <AndroidAsset Include="..\XamApp.UWP\Assets\Animations\LottieLogo1.json">
+      <Link>Assets\Animations\LottieLogo1.json</Link>
+    </AndroidAsset>
     <None Include="Properties\AndroidManifest.xml" />
   </ItemGroup>
   <ItemGroup>

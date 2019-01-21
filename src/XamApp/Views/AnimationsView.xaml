@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="XamApp.Views.AnimationsView"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:bitView="clr-namespace:Bit.View;assembly=Bit.CSharpClient.Prism"
+    xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:xamAnimation="clr-namespace:Xamanimation;assembly=Xamanimation">
+    <StackLayout Spacing="3">
+
+        <lottie:AnimationView
+            Animation="{OnPlatform UWP='Assets/Animations/LottieLogo1.json',
+                                   Android='Animations/LottieLogo1.json',
+                                   iOS='Animations/LottieLogo1.json'}"
+            AutoPlay="True"
+            HeightRequest="300"
+            HorizontalOptions="Center"
+            Loop="True"
+            VerticalOptions="Center"
+            WidthRequest="300" />
+
+        <Button
+            x:Name="DeleteButton"
+            BackgroundColor="Orange"
+            HorizontalOptions="Center"
+            Text="Delete">
+            <Button.Triggers>
+                <EventTrigger Event="Clicked">
+                    <bitView:SetPropertyAction Property="BackgroundColor" Value="Red" />
+                    <xamAnimation:BeginAnimation>
+                        <xamAnimation:BeginAnimation.Animation>
+                            <xamAnimation:ColorAnimation
+                                Target="{x:Reference DeleteButton}"
+                                ToColor="Orange"
+                                Duration="1000" />
+                        </xamAnimation:BeginAnimation.Animation>
+                    </xamAnimation:BeginAnimation>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+
+    </StackLayout>
+</ContentPage>

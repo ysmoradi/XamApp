@@ -98,6 +98,9 @@
     <BundleResource Include="..\XamApp.UWP\Assets\Fonts\OpenSansRegular.ttf">
       <Link>Resources\Fonts\OpenSansRegular.ttf</Link>
     </BundleResource>
+    <BundleResource Include="..\XamApp.UWP\Assets\Animations\LottieLogo1.json">
+      <Link>Resources\Animations\LottieLogo1.json</Link>
+    </BundleResource>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
