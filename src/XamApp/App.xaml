@@ -154,5 +154,19 @@
             </Style.Triggers>
         </Style>
 
+        <Style TargetType="Span">
+            <Style.Triggers>
+                <Trigger TargetType="Span" Property="FontAttributes" Value="Bold">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                </Trigger>
+                <Trigger TargetType="Span" Property="FontAttributes" Value="Italic">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                </Trigger>
+                <Trigger TargetType="Span" Property="FontAttributes" Value="None">
+                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
     </bit:BitApplication.Resources>
 </bit:BitApplication>
