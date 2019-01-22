@@ -13,11 +13,11 @@
                                    Android='Animations/LottieLogo1.json',
                                    iOS='Animations/LottieLogo1.json'}"
             AutoPlay="True"
-            HeightRequest="300"
+            HeightRequest="500"
             HorizontalOptions="Center"
             Loop="True"
             VerticalOptions="Center"
-            WidthRequest="300" />
+            WidthRequest="500" />
 
         <Button
             x:Name="DeleteButton"
