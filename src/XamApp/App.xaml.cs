@@ -6,7 +6,6 @@ using Bit.ViewModel.Implementations;
 using Prism;
 using Prism.Autofac;
 using Prism.Ioc;
-using Prism.Navigation;
 using System;
 using System.Globalization;
 using System.Threading.Tasks;
@@ -62,8 +61,8 @@ namespace XamApp
 
             Strings.Culture = CultureInfo.CurrentUICulture = new CultureInfo("en");
 
-            // await NavigationService.NavigateAsync("/Login", animated: false);
-            await NavigationService.NavigateAsync("/Nav/HelloWorld", animated: false);
+            // await NavigationService.NavigateAsync("/Login");
+            await NavigationService.NavigateAsync("/Nav/HelloWorld");
 
             await base.OnInitializedAsync();
         }
@@ -81,6 +80,7 @@ namespace XamApp
             containerRegistry.RegisterForNav<ProductsView, ProductsViewModel>("Products");
             containerRegistry.RegisterForNav<PlatformSpecificSamplesView, PlatformSpecificSamplesViewModel>("PlatformSpecificSamples");
             containerRegistry.RegisterForNav<AnimationsView, AnimationsViewModel>("Animations");
+            containerRegistry.RegisterForNav<RestSamplesView, RestSamplesViewModel>("RestSamples");
 
             containerBuilder.Register<IClientAppProfile>(c => new DefaultClientAppProfile
             {
@@ -88,6 +88,8 @@ namespace XamApp
             }).SingleInstance();
 
             containerBuilder.RegisterRequiredServices();
+            containerBuilder.RegisterHttpClient();
+            containerBuilder.RegisterIdentityClient();
 
             containerBuilder.RegisterInstance(UserDialogs.Instance);
 
