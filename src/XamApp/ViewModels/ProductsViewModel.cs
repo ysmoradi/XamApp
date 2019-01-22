@@ -7,7 +7,7 @@ using XamApp.Models;
 
 namespace XamApp.ViewModels
 {
-    public class ProductsViewModel : XamAppViewModelBase
+    public class ProductsViewModel : BitViewModelBase
     {
         public ProductsViewModel()
         {

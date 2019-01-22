@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace XamApp.ViewModels
 {
-    public class HelloWorldViewModel : XamAppViewModelBase
+    public class HelloWorldViewModel : BitViewModelBase
     {
         public int StepsCount { get; set; }
 

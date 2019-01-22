@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace XamApp.ViewModels
 {
-    public class LoginViewModel : XamAppViewModelBase
+    public class LoginViewModel : BitViewModelBase
     {
         public string UserName { get; set; }
 
