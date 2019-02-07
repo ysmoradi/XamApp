@@ -5,7 +5,6 @@ using Bit.ViewModel.Contracts;
 using Bit.ViewModel.Implementations;
 using Microsoft.Extensions.DependencyInjection;
 using Prism;
-using Prism.Autofac;
 using Prism.Ioc;
 using System;
 using System.Globalization;
@@ -18,27 +17,11 @@ using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 
-namespace Bit.View
-{
-    public class OnPlatform<T>
-    {
-        public T Value { get; set; }
-
-        public static implicit operator T(OnPlatform<T> value)
-        {
-            if (value == null)
-                throw new ArgumentNullException(nameof(value));
-
-            return value.Value;
-        }
-    }
-}
-
 namespace XamApp
 {
     public partial class App : BitApplication
     {
-        public new static App Current
+        public static new App Current
         {
             get { return (App)Application.Current; }
         }
@@ -56,14 +39,21 @@ namespace XamApp
 #endif
         }
 
-        protected async override Task OnInitializedAsync()
+        protected override async Task OnInitializedAsync()
         {
             InitializeComponent();
 
             Strings.Culture = CultureInfo.CurrentUICulture = new CultureInfo("en");
 
-            // await NavigationService.NavigateAsync("/Login");
-            await NavigationService.NavigateAsync("/Nav/HelloWorld");
+            await NavigationService.NavigateAsync("/Nav/HelloWorld"); // Simple tap counter sample
+
+            // await NavigationService.NavigateAsync("/MasterDetail/Nav/HelloWorld"); // Simple tap counter sample in master detail
+            // await NavigationService.NavigateAsync("/Nav/HelloWorld/Intro"); // Popup page
+            // await NavigationService.NavigateAsync("/Nav/Login"); // Simple login form sample
+            // await NavigationService.NavigateAsync("/Nav/Products"); // List view sample
+            // await NavigationService.NavigateAsync("/Nav/PlatformSpecificSamples"); // Platform specific sample
+            // await NavigationService.NavigateAsync("/Nav/Animations"); // Animations
+            // await NavigationService.NavigateAsync("/Nav/RestSamples"); // rest api call sample
 
             await base.OnInitializedAsync();
         }

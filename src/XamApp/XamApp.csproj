@@ -15,7 +15,7 @@
     <PackageReference Include="Bit.CSharpClient.Prism" Version="1.7.0" />
     <PackageReference Include="Bit.CSharpClient.Rest" Version="1.7.0" />
     <PackageReference Include="BitCodeAnalyzer" Version="1.7.0" />
-    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="2.6.3" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="2.7.0" />
     <PackageReference Include="Fody" Version="3.3.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
@@ -23,11 +23,11 @@
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="1.13.0" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="1.13.0" />
     <PackageReference Include="PropertyChanged.Fody" Version="2.6.0" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.4.0.48" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="16.4.0.52" />
     <PackageReference Include="Xamanimation" Version="1.2.0" />
     <PackageReference Include="Xamarin.Forms" Version="3.4.0.1029999" />
     <PackageReference Condition=" '$(Configuration)' == 'Debug' " Include="Xamarin.LiveReload" Version="0.3.27" />
-    <PackageReference Condition=" '$(Configuration)' == 'Debug' " Include="LiveXAML" Version="2.1.59" />
+    <PackageReference Condition=" '$(Configuration)' == 'Debug' " Include="LiveXAML" Version="2.1.63" />
   </ItemGroup>
 
   <ItemGroup>
