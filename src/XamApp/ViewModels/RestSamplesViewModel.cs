@@ -1,4 +1,5 @@
-﻿using Bit.ViewModel;
+﻿using Acr.UserDialogs;
+using Bit.ViewModel;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System.Collections.Generic;
@@ -14,6 +15,8 @@ namespace XamApp.ViewModels
         public virtual HttpClient HttpClient { get; set; }
 
         public virtual BitDelegateCommand CallUsersListApiUsingHttpClientCommand { get; set; }
+
+        public virtual IUserDialogs UserDialogs { get; set; }
 
         public RestSamplesViewModel()
         {
@@ -31,6 +34,7 @@ namespace XamApp.ViewModels
             using (JsonReader jsonReader = new JsonTextReader(streamReader))
             {
                 List<UserDto> users = (await JToken.LoadAsync(jsonReader))["data"].ToObject<List<UserDto>>();
+                await UserDialogs.AlertAsync("!");
             }
         }
     }

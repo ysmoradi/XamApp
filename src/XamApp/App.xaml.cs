@@ -45,7 +45,7 @@ namespace XamApp
 
             Strings.Culture = CultureInfo.CurrentUICulture = new CultureInfo("en");
 
-            await NavigationService.NavigateAsync("/Nav/HelloWorld"); // Simple tap counter sample
+            //await NavigationService.NavigateAsync("/Nav/HelloWorld"); // Simple tap counter sample
 
             // await NavigationService.NavigateAsync("/MasterDetail/Nav/HelloWorld"); // Simple tap counter sample in master detail
             // await NavigationService.NavigateAsync("/Nav/HelloWorld/Intro"); // Popup page
@@ -53,7 +53,7 @@ namespace XamApp
             // await NavigationService.NavigateAsync("/Nav/Products"); // List view sample
             // await NavigationService.NavigateAsync("/Nav/PlatformSpecificSamples"); // Platform specific sample
             // await NavigationService.NavigateAsync("/Nav/Animations"); // Animations
-            // await NavigationService.NavigateAsync("/Nav/RestSamples"); // rest api call sample
+            await NavigationService.NavigateAsync("/Nav/RestSamples"); // rest api call sample
 
             await base.OnInitializedAsync();
         }
