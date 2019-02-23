@@ -75,11 +75,11 @@
 
   <!-- Bit.CSharpClient.Rest -->
 
-  <!--
+  
   <assembly fullname="Bit.CSharpClient.Rest">
     <type fullname="*" />
   </assembly>
-  -->
+  
   
   <!-- Bit.CSharpClient.Controls -->
 

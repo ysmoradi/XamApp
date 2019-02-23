@@ -77,11 +77,11 @@
 
   <!-- Bit.CSharpClient.Rest -->
 
-  <!--
+  
   <assembly fullname="Bit.CSharpClient.Rest">
     <type fullname="*" />
   </assembly>
-  -->
+  
 
   <!-- Bit.CSharpClient.Controls -->
 
@@ -106,5 +106,15 @@
   <assembly fullname="System.Core">
     <type fullname="*" />
   </assembly>
+  
+  <!-- Ported from proguard config -->
 
+  <assembly fullname="Xamarin.Android.Support.v7.AppCompat">
+    <type fullname="Android.Support.V7.Widget.*" />
+  </assembly>
+
+  <assembly fullname="Xamarin.Android.Support.Core.UI">
+    <type fullname="Android.Support.V4.Widget.Space" />
+  </assembly>
+  
 </linker>
