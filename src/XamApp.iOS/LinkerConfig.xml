@@ -16,12 +16,6 @@
     <type fullname="*" />
   </assembly>
   Add 'linkskip Microsoft.EntityFrameworkCore' to Additional mtouch arguments in 'iOS Build' of project settings. Then remove this line from LinkerConfig.xml
-  <assembly fullname="Microsoft.Extensions.Logging">
-    <type fullname="*" />
-  </assembly>
-  <assembly fullname="Microsoft.Extensions.Options">
-    <type fullname="*" />
-  </assembly>
   <assembly fullname="Microsoft.Extensions.Caching.Memory">
     <type fullname="*" />
   </assembly>
@@ -45,6 +39,9 @@
     <type fullname="*" />
   </assembly>
   <assembly fullname="Autofac">
+    <type fullname="*" />
+  </assembly>
+  <assembly fullname="Autofac.Extensions.DependencyInjection">
     <type fullname="*" />
   </assembly>
   <assembly fullname="Bit.CSharpClient.Prism">
@@ -117,6 +114,20 @@
       <method name="Min"></method>
       <method name="Round"></method>
     </type>
+  </assembly>
+
+    <!-- Microsoft Extensions => For both Bit.CSharpClient.Rest and Bit.CSharpClient.Data.EntityFrameworkCore -->
+
+  <assembly fullname="Microsoft.Extensions.Http">
+    <type fullname="*" />
+  </assembly>
+
+  <assembly fullname="Microsoft.Extensions.Logging">
+    <type fullname="*" />
+  </assembly>
+
+  <assembly fullname="Microsoft.Extensions.Options">
+    <type fullname="*" />
   </assembly>
 
 </linker>
