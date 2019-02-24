@@ -49,7 +49,7 @@
     <EnableProguard>true</EnableProguard>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidLinkMode>Full</AndroidLinkMode>
-    <AndroidAotAdditionalArguments>no-write-symbols,nodebug</AndroidAotAdditionalArguments>
+    <AndroidAotAdditionalArguments>llvmopts="-data-layout="p:32:32:32" -O2 -disable-tail-calls"</AndroidAotAdditionalArguments>
     <!--<AndroidAotMode>Full</AndroidAotMode>-->
     <AndroidAotMode>Hybrid</AndroidAotMode>
     <!--<AndroidAotMode>Normal</AndroidAotMode>-->
@@ -57,7 +57,7 @@
     </AndroidSupportedAbis>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <AotAssemblies>true</AotAssemblies>
-    <EnableLLVM>false</EnableLLVM>
+    <EnableLLVM>true</EnableLLVM>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
