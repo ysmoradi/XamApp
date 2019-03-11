@@ -78,7 +78,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProguardConfiguration Include="proguard_xamarin.cfg" />
     <AndroidAsset Include="..\XamApp.UWP\Assets\Fonts\OpenSansBold.ttf">
       <Link>Assets\Fonts\OpenSansBold.ttf</Link>
     </AndroidAsset>
