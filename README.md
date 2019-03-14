@@ -1,2 +1,1 @@
-Sample project with Xamarin.Forms, Bit-Framework, Prism, RgPluginPopup, ... 
-This project contains several configurations to enhance overal performance of a new xamarin.forms project.
+Sample project with Xamarin forms, prism and bit framework.
