@@ -12,8 +12,8 @@
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.0.4" />
-    <PackageReference Include="Bit.CSharpClient.Prism" Version="1.9.1" />
-    <PackageReference Include="Bit.CSharpClient.Rest" Version="1.9.1" />
+    <PackageReference Include="Bit.CSharpClient.Prism" Version="1.9.3" />
+    <PackageReference Include="Bit.CSharpClient.Rest" Version="1.9.3" />
     <PackageReference Include="BitCodeAnalyzer" Version="1.9.0" />
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="2.7.0" />
     <PackageReference Include="Fody" Version="3.3.5">

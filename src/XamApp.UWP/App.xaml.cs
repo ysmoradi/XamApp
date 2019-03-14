@@ -1,4 +1,5 @@
 ﻿using Bit.ViewModel;
+using Lottie.Forms.UWP.Renderers;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
@@ -39,7 +40,8 @@ namespace XamApp.UWP
 
                 Xamarin.Forms.Forms.Init(e, new Assembly[]
                 {
-                    typeof(SfListViewRenderer).GetTypeInfo().Assembly
+                    typeof(SfListViewRenderer).GetTypeInfo().Assembly,
+                    typeof(AnimationViewRenderer).GetTypeInfo().Assembly
                 }.Union(GetBitRendererAssemblies()));
 
                 Window.Current.Content = rootFrame;
