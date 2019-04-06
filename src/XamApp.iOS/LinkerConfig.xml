@@ -115,14 +115,18 @@
       <method name="Round"></method>
     </type>
   </assembly>
-
-    <!-- Microsoft Extensions => For both Bit.CSharpClient.Rest and Bit.CSharpClient.Data.EntityFrameworkCore -->
+  
+  <!-- Microsoft Extensions => For both Bit.CSharpClient.Rest and Bit.CSharpClient.Data.EntityFrameworkCore -->
 
   <assembly fullname="Microsoft.Extensions.Http">
     <type fullname="*" />
   </assembly>
 
   <assembly fullname="Microsoft.Extensions.Logging">
+    <type fullname="*" />
+  </assembly>
+  
+  <assembly fullname="Microsoft.Extensions.Logging.Debug">
     <type fullname="*" />
   </assembly>
 
