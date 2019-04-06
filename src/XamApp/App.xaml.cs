@@ -4,9 +4,9 @@ using Bit;
 using Bit.ViewModel.Contracts;
 using Bit.ViewModel.Implementations;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using Prism;
 using Prism.Ioc;
-using System;
 using System.Globalization;
 using System.Threading.Tasks;
 using XamApp.Resources;
@@ -81,6 +81,13 @@ namespace XamApp
             containerBuilder.RegisterIdentityClient();
 
             containerBuilder.RegisterInstance(UserDialogs.Instance);
+
+#if DEBUG
+            services.AddLogging(loggingBuilder =>
+            {
+                loggingBuilder.AddDebug();
+            });
+#endif
 
             base.RegisterTypes(containerRegistry, containerBuilder, services);
         }

@@ -130,7 +130,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="3.6.0.220655" />
+    <PackageReference Include="Xamarin.Forms" Version="3.6.0.293080" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamApp\XamApp.csproj">
