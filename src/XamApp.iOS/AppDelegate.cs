@@ -3,7 +3,6 @@ using Bit.iOS;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
 using Foundation;
-using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Prism.Autofac;
@@ -23,7 +22,7 @@ namespace XamApp.iOS
     {
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-            AppCenter.Start("054753be-db82-424c-a6d1-19129c151a7a", typeof(Crashes), typeof(Analytics));
+            AppCenterTelemetryService.Current.Init("054753be-db82-424c-a6d1-19129c151a7a", typeof(Crashes), typeof(Analytics));
 
             BitExceptionHandler.Current = new XamAppExceptionHandler();
 

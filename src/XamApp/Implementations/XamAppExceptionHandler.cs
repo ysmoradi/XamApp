@@ -1,7 +1,6 @@
-﻿using System;
+﻿using Bit.ViewModel;
+using System;
 using System.Collections.Generic;
-using Bit.ViewModel;
-using Microsoft.AppCenter.Crashes;
 
 namespace XamApp.Implementations
 {
@@ -14,8 +13,6 @@ namespace XamApp.Implementations
             System.Diagnostics.Debugger.Break();
 
 #endif
-
-            Crashes.TrackError(exp, properties);
 
             base.OnExceptionReceived(exp, properties);
         }

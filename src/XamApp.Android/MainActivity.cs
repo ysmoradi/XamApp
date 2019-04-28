@@ -3,10 +3,9 @@ using Android.App;
 using Android.Content.PM;
 using Android.OS;
 using Autofac;
-using Bit.Droid;
+using Bit.Android;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
-using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using Prism.Autofac;
@@ -24,7 +23,7 @@ namespace XamApp.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
-            AppCenter.Start("ee74db97-563c-48cd-a1a3-aaf403fe1cc4", typeof(Crashes), typeof(Analytics));
+            AppCenterTelemetryService.Current.Init(appSecret: "ee74db97-563c-48cd-a1a3-aaf403fe1cc4", typeof(Crashes), typeof(Analytics));
 
             BitExceptionHandler.Current = new XamAppExceptionHandler();
 

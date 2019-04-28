@@ -1,8 +1,6 @@
 ﻿using Bit.ViewModel;
 using Lottie.Forms.UWP.Renderers;
-using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
-using Microsoft.AppCenter.Crashes;
 using Syncfusion.ListView.XForms.UWP;
 using System.Linq;
 using System.Reflection;
@@ -18,7 +16,7 @@ namespace XamApp.UWP
     {
         static App()
         {
-            AppCenter.Start("3d9d3c01-e9d8-4251-a578-aa57f8f98d5e", typeof(Crashes), typeof(Analytics));
+            Bit.ViewModel.Implementations.AppCenterTelemetryService.Current.Init(appSecret: "3d9d3c01-e9d8-4251-a578-aa57f8f98d5e", typeof(Analytics));
 
             BitExceptionHandler.Current = new XamAppExceptionHandler();
 
