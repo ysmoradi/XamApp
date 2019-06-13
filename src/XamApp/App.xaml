@@ -1,31 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<bit:BitApplication
+<bitPrism:BitApplication
     x:Class="XamApp.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:bit="clr-namespace:Bit;assembly=Bit.CSharpClient.Prism"
-    xmlns:bitView="clr-namespace:Bit.View;assembly=Bit.CSharpClient.Controls">
+    xmlns:bitPrism="clr-namespace:Bit;assembly=Bit.CSharpClient.Prism"
+    xmlns:bit="https://bit-framework.com">
 
-    <!-- Don't use xmlns:bit="https://bit-framework.com" in App.xaml. Using that in other xaml files is fine. -->
-    <!-- Don't forget to call BitCSharpClientControls.XamlInit(); in your shared/.net-standard project. -->
+    <Application.Resources>
 
-    <bit:BitApplication.Resources>
-
-        <bitView:OnPlatform
+        <bit:OnPlatform
             x:Key="OpenSansRegular"
             x:TypeArguments="x:String"
             Value="{OnPlatform Android='Fonts/OpenSansRegular.ttf#Open Sans',
                                iOS='OpenSans-Regular',
                                UWP='Assets/Fonts/OpenSansRegular.ttf#Open Sans'}" />
 
-        <bitView:OnPlatform
+        <bit:OnPlatform
             x:Key="OpenSansBold"
             x:TypeArguments="x:String"
             Value="{OnPlatform Android='Fonts/OpenSansBold.ttf#Open Sans',
                                iOS='OpenSans-Bold',
                                UWP='Assets/Fonts/OpenSansBold.ttf#Open Sans'}" />
 
-        <bitView:OnPlatform
+        <bit:OnPlatform
             x:Key="OpenSansItalic"
             x:TypeArguments="x:String"
             Value="{OnPlatform Android='Fonts/OpenSansItalic.ttf#Open Sans',
@@ -172,5 +169,5 @@
             </Style.Triggers>
         </Style>
 
-    </bit:BitApplication.Resources>
-</bit:BitApplication>
+    </Application.Resources>
+</bitPrism:BitApplication>
