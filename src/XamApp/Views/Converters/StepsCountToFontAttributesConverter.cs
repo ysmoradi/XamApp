@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Bit.View;
+using System;
 using System.Globalization;
 using Xamarin.Forms;
 
 namespace XamApp.Views.Converters
 {
-    public class StepsCountToFontAttributesConverter : Converter<int, FontAttributes>
+    public class StepsCountToFontAttributesConverter : ValueConverter<int, FontAttributes>
     {
         protected override FontAttributes Convert(int value, Type targetType, object parameter, CultureInfo culture)
         {

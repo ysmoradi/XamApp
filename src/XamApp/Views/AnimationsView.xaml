@@ -3,7 +3,7 @@
     x:Class="XamApp.Views.AnimationsView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:bitView="clr-namespace:Bit.View;assembly=Bit.CSharpClient.Prism"
+    xmlns:bit="https://bit-framework.com"
     xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
     xmlns:xamAnimation="clr-namespace:Xamanimation;assembly=Xamanimation">
     <StackLayout Spacing="3">
@@ -26,7 +26,7 @@
             Text="Delete">
             <Button.Triggers>
                 <EventTrigger Event="Clicked">
-                    <bitView:SetPropertyAction Property="BackgroundColor" Value="Red" />
+                    <bit:SetPropertyAction Property="BackgroundColor" Value="Red" />
                     <xamAnimation:BeginAnimation>
                         <xamAnimation:BeginAnimation.Animation>
                             <xamAnimation:ColorAnimation

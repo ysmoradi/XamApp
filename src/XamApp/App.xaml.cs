@@ -1,6 +1,7 @@
 ﻿using Acr.UserDialogs;
 using Autofac;
 using Bit;
+using Bit.View;
 using Bit.ViewModel.Contracts;
 using Bit.ViewModel.Implementations;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +30,7 @@ namespace XamApp
         public App()
             : this(null)
         {
+            BitCSharpClientControls.XamlInit();
         }
 
         public App(IPlatformInitializer platformInitializer)
