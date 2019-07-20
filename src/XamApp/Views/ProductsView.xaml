@@ -17,7 +17,7 @@
                         FlexLayout.Basis="40%"
                         Text="{Binding Name}"
                         VerticalTextAlignment="Center" />
-                    <bit:BitCheckbox
+                    <CheckBox
                         FlexLayout.Basis="20%"
                         InputTransparent="True"
                         IsChecked="{Binding IsActive}" />
