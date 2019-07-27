@@ -12,18 +12,18 @@
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.0.4" />
-    <PackageReference Include="Bit.CSharpClient.Prism" Version="2.5.0" />
-    <PackageReference Include="Bit.CSharpClient.Rest" Version="2.5.0" />
-    <PackageReference Include="BitCodeAnalyzer" Version="2.5.0" />
+    <PackageReference Include="Bit.CSharpClient.Prism" Version="2.6.4" />
+    <PackageReference Include="Bit.CSharpClient.Rest" Version="2.6.4" />
+    <PackageReference Include="BitCodeAnalyzer" Version="2.6.0" />
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.0.0" />
     <PackageReference Include="Fody" Version="5.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
     <PackageReference Include="PropertyChanged.Fody" Version="3.0.1" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.2.0.35" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.2.0.36" />
     <PackageReference Include="Xamanimation" Version="1.2.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.1.0.581479" />
+    <PackageReference Include="Xamarin.Forms" Version="4.1.0.618606" />
     <PackageReference Condition=" '$(Configuration)' == 'Debug' " Include="Xamarin.LiveReload" Version="0.3.27" />
     <PackageReference Condition=" '$(Configuration)' == 'Debug' " Include="LiveXAML" Version="2.1.72" />
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="2.2.0" />
