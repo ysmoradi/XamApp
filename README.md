@@ -1,1 +1,1 @@
-Sample project with Xamarin forms, prism and bit framework.
+Simple sample project with Xamarin forms, prism and bit framework.
