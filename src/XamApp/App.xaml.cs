@@ -36,9 +36,6 @@ namespace XamApp
         public App(IPlatformInitializer platformInitializer)
             : base(platformInitializer)
         {
-#if DEBUG
-            LiveReload.Init();
-#endif
         }
 
         protected override async Task OnInitializedAsync()
