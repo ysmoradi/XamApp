@@ -11,20 +11,20 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Acr.UserDialogs" Version="7.0.30" />
-    <PackageReference Include="Bit.CSharpClient.Prism" Version="2.9.0" />
-    <PackageReference Include="Bit.CSharpClient.Rest" Version="2.9.0" />
-    <PackageReference Include="BitCodeAnalyzer" Version="2.9.0" />
-    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.0.1" />
-    <PackageReference Include="Fody" Version="6.0.0">
+    <PackageReference Include="Acr.UserDialogs" Version="7.0.35" />
+    <PackageReference Include="Bit.CSharpClient.Prism" Version="3.3.0" />
+    <PackageReference Include="Bit.CSharpClient.Rest" Version="3.3.0" />
+    <PackageReference Include="BitCodeAnalyzer" Version="3.3.0" />
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.0.3" />
+    <PackageReference Include="Fody" Version="6.0.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="PropertyChanged.Fody" Version="3.1.3" />
-    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.14" />
+    <PackageReference Include="PropertyChanged.Fody" Version="3.2.0" />
+    <PackageReference Include="Syncfusion.Xamarin.SfListView" Version="17.3.0.33" />
     <PackageReference Include="Xamanimation" Version="1.3.0" />
-    <PackageReference Include="Xamarin.Forms" Version="4.2.0.848062" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
+    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991221" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.1.0" />
   </ItemGroup>
 
   <ItemGroup>
