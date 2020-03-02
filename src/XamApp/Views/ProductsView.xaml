@@ -3,7 +3,7 @@
     x:Class="XamApp.Views.ProductsView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:bit="https://bit-framework.com"
+    xmlns:bit="https://bitframework.com"
     xmlns:model="clr-namespace:XamApp.Models"
     xmlns:sfListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     xmlns:vm="clr-namespace:XamApp.ViewModels"

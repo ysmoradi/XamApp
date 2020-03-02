@@ -3,7 +3,7 @@
     x:Class="XamApp.Views.AnimationsView"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:bit="https://bit-framework.com"
+    xmlns:bit="https://bitframework.com"
     xmlns:lottie="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
     xmlns:xamAnimation="clr-namespace:Xamanimation;assembly=Xamanimation">
     <StackLayout Spacing="3">

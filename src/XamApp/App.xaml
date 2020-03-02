@@ -4,28 +4,28 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:bitPrism="clr-namespace:Bit;assembly=Bit.CSharpClient.Prism"
-    xmlns:bit="https://bit-framework.com">
+    xmlns:bit="https://bitframework.com">
 
     <Application.Resources>
 
-        <bit:OnPlatform
+        <OnPlatform
             x:Key="OpenSansRegular"
             x:TypeArguments="x:String"
-            Value="{OnPlatform Android='Fonts/OpenSansRegular.ttf#Open Sans',
+            Default="{OnPlatform Android='Fonts/OpenSansRegular.ttf#Open Sans',
                                iOS='OpenSans-Regular',
                                UWP='Assets/Fonts/OpenSansRegular.ttf#Open Sans'}" />
 
-        <bit:OnPlatform
+        <OnPlatform
             x:Key="OpenSansBold"
             x:TypeArguments="x:String"
-            Value="{OnPlatform Android='Fonts/OpenSansBold.ttf#Open Sans',
+            Default="{OnPlatform Android='Fonts/OpenSansBold.ttf#Open Sans',
                                iOS='OpenSans-Bold',
                                UWP='Assets/Fonts/OpenSansBold.ttf#Open Sans'}" />
 
-        <bit:OnPlatform
+        <OnPlatform
             x:Key="OpenSansItalic"
             x:TypeArguments="x:String"
-            Value="{OnPlatform Android='Fonts/OpenSansItalic.ttf#Open Sans',
+            Default="{OnPlatform Android='Fonts/OpenSansItalic.ttf#Open Sans',
                                iOS='OpenSans-Italic',
                                UWP='Assets/Fonts/OpenSansItalic.ttf#Open Sans'}" />
 
