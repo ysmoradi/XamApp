@@ -8,6 +8,7 @@
     xmlns:sfListView="clr-namespace:Syncfusion.ListView.XForms;assembly=Syncfusion.SfListView.XForms"
     xmlns:vm="clr-namespace:XamApp.ViewModels"
     Title="Products"
+    x:Name="productsView"
     x:DataType="vm:ProductsViewModel">
     <sfListView:SfListView Padding="3" ItemsSource="{Binding Products}">
         <sfListView:SfListView.ItemTemplate>
@@ -26,7 +27,7 @@
                         Text="{Binding Price}"
                         VerticalTextAlignment="Center" />
                     <Button
-                        Command="{bit:ViewModelBinding ShowProductDetailsCommand}"
+                        Command="{Binding BindingContext.ShowProductDetailsCommand, Source={x:Reference productsView}}"
                         CommandParameter="{Binding .}"
                         FlexLayout.Basis="20%"
                         Text="Detail..." />

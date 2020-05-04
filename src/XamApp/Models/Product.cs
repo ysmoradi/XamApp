@@ -1,4 +1,4 @@
-﻿using Bit.Model;
+﻿using Bit.Core.Models;
 
 namespace XamApp.Models
 {

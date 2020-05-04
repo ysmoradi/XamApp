@@ -1,6 +1,8 @@
 ﻿using Acr.UserDialogs;
 using Autofac;
 using Bit;
+using Bit.Core.Contracts;
+using Bit.Core.Implementations;
 using Bit.View;
 using Bit.ViewModel.Contracts;
 using Bit.ViewModel.Implementations;
@@ -57,7 +59,7 @@ namespace XamApp
             await base.OnInitializedAsync();
         }
 
-        protected override void RegisterTypes(IContainerRegistry containerRegistry, ContainerBuilder containerBuilder, IServiceCollection services)
+        protected override void RegisterTypes(IDependencyManager dependencyManager, IContainerRegistry containerRegistry, ContainerBuilder containerBuilder, IServiceCollection services)
         {
             containerRegistry.RegisterForNav<NavigationPage>("Nav");
             containerRegistry.RegisterForNav<XamAppMasterDetailView, XamAppMasterDetailViewModel>("MasterDetail");
@@ -75,9 +77,9 @@ namespace XamApp
                 AppName = "XamApp",
             }).SingleInstance();
 
-            containerBuilder.RegisterRequiredServices();
-            containerBuilder.RegisterHttpClient();
-            containerBuilder.RegisterIdentityClient();
+            dependencyManager.RegisterRequiredServices();
+            dependencyManager.RegisterHttpClient();
+            dependencyManager.RegisterIdentityClient();
 
             containerBuilder.RegisterInstance(UserDialogs.Instance);
 
@@ -88,7 +90,7 @@ namespace XamApp
             });
 #endif
 
-            base.RegisterTypes(containerRegistry, containerBuilder, services);
+            base.RegisterTypes(dependencyManager, containerRegistry, containerBuilder, services);
         }
     }
 }
