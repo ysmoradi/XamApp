@@ -46,7 +46,7 @@
   <assembly fullname="Autofac.Extensions.DependencyInjection">
     <type fullname="*" />
   </assembly>
-  <assembly fullname="Bit.CSharpClient.Prism">
+  <assembly fullname="Bit.Client.Xamarin.Prism">
     <type fullname="*" />
   </assembly>
 
@@ -75,7 +75,7 @@
   <!-- Bit.CSharpClient.Rest -->
 
 
-  <assembly fullname="Bit.CSharpClient.Rest">
+  <assembly fullname="Bit.Universal.Http">
     <type fullname="*" />
   </assembly>
 
@@ -85,7 +85,7 @@
   <assembly fullname="Rg.Plugins.Popup">
     <type fullname="*" />
   </assembly>
-  <assembly fullname="Bit.CSharpClient.Controls">
+  <assembly fullname="Bit.Client.Xamarin.Controls">
     <type fullname="*" />
   </assembly>
 
@@ -102,16 +102,6 @@
 
   <assembly fullname="System.Core">
     <type fullname="*" />
-  </assembly>
-
-  <!-- Ported from proguard config -->
-
-  <assembly fullname="Xamarin.Android.Support.v7.AppCompat">
-    <type fullname="Android.Support.V7.Widget.*" />
-  </assembly>
-
-  <assembly fullname="Xamarin.Android.Support.Core.UI">
-    <type fullname="Android.Support.V4.Widget.Space" />
   </assembly>
 
   <!-- Microsoft Extensions => For both Bit.CSharpClient.Rest and Bit.CSharpClient.Data.EntityFrameworkCore -->
