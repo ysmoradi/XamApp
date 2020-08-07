@@ -3,8 +3,8 @@
     x:Class="XamApp.App"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:bitPrism="clr-namespace:Bit;assembly=Bit.CSharpClient.Prism"
-    xmlns:bit="https://bitframework.com">
+    xmlns:bit="https://bitframework.com"
+    xmlns:bitPrism="clr-namespace:Bit;assembly=Bit.CSharpClient.Prism">
 
     <Application.Resources>
 
@@ -12,22 +12,22 @@
             x:Key="OpenSansRegular"
             x:TypeArguments="x:String"
             Default="{OnPlatform Android='Fonts/OpenSansRegular.ttf#Open Sans',
-                               iOS='OpenSans-Regular',
-                               UWP='Assets/Fonts/OpenSansRegular.ttf#Open Sans'}" />
+                                 iOS='OpenSans-Regular',
+                                 UWP='Assets/Fonts/OpenSansRegular.ttf#Open Sans'}" />
 
         <OnPlatform
             x:Key="OpenSansBold"
             x:TypeArguments="x:String"
             Default="{OnPlatform Android='Fonts/OpenSansBold.ttf#Open Sans',
-                               iOS='OpenSans-Bold',
-                               UWP='Assets/Fonts/OpenSansBold.ttf#Open Sans'}" />
+                                 iOS='OpenSans-Bold',
+                                 UWP='Assets/Fonts/OpenSansBold.ttf#Open Sans'}" />
 
         <OnPlatform
             x:Key="OpenSansItalic"
             x:TypeArguments="x:String"
             Default="{OnPlatform Android='Fonts/OpenSansItalic.ttf#Open Sans',
-                               iOS='OpenSans-Italic',
-                               UWP='Assets/Fonts/OpenSansItalic.ttf#Open Sans'}" />
+                                 iOS='OpenSans-Italic',
+                                 UWP='Assets/Fonts/OpenSansItalic.ttf#Open Sans'}" />
 
         <Style TargetType="StackLayout">
             <Setter Property="Spacing" Value="0" />
@@ -44,6 +44,7 @@
         </Style>
 
         <Style TargetType="Button">
+            <Setter Property="TextTransform" Value="None" />
             <Style.Triggers>
                 <Trigger TargetType="Button" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -58,6 +59,7 @@
         </Style>
 
         <Style TargetType="Label">
+            <Setter Property="TextTransform" Value="None" />
             <Style.Triggers>
                 <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -72,6 +74,7 @@
         </Style>
 
         <Style TargetType="Entry">
+            <Setter Property="TextTransform" Value="None" />
             <Style.Triggers>
                 <Trigger TargetType="Entry" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -86,6 +89,7 @@
         </Style>
 
         <Style TargetType="TimePicker">
+            <Setter Property="TextTransform" Value="None" />
             <Style.Triggers>
                 <Trigger TargetType="TimePicker" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -100,6 +104,7 @@
         </Style>
 
         <Style TargetType="DatePicker">
+            <Setter Property="TextTransform" Value="None" />
             <Style.Triggers>
                 <Trigger TargetType="DatePicker" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -114,6 +119,7 @@
         </Style>
 
         <Style TargetType="Picker">
+            <Setter Property="TextTransform" Value="None" />
             <Style.Triggers>
                 <Trigger TargetType="Picker" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -128,6 +134,7 @@
         </Style>
 
         <Style TargetType="SearchBar">
+            <Setter Property="TextTransform" Value="None" />
             <Style.Triggers>
                 <Trigger TargetType="SearchBar" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -142,6 +149,7 @@
         </Style>
 
         <Style TargetType="Editor">
+            <Setter Property="TextTransform" Value="None" />
             <Style.Triggers>
                 <Trigger TargetType="Editor" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
@@ -156,6 +164,7 @@
         </Style>
 
         <Style TargetType="Span">
+            <Setter Property="TextTransform" Value="None" />
             <Style.Triggers>
                 <Trigger TargetType="Span" Property="FontAttributes" Value="Bold">
                     <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
