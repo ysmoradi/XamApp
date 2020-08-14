@@ -8,175 +8,160 @@
 
     <Application.Resources>
 
-        <OnPlatform
-            x:Key="OpenSansRegular"
-            x:TypeArguments="x:String"
-            Default="{OnPlatform Android='Fonts/OpenSansRegular.ttf#Open Sans',
-                                 iOS='OpenSans-Regular',
-                                 UWP='Assets/Fonts/OpenSansRegular.ttf#Open Sans'}" />
+        <ResourceDictionary>
 
-        <OnPlatform
-            x:Key="OpenSansBold"
-            x:TypeArguments="x:String"
-            Default="{OnPlatform Android='Fonts/OpenSansBold.ttf#Open Sans',
-                                 iOS='OpenSans-Bold',
-                                 UWP='Assets/Fonts/OpenSansBold.ttf#Open Sans'}" />
+            <ResourceDictionary.MergedDictionaries>
+                <bit:BitGlobalStyles />
+            </ResourceDictionary.MergedDictionaries>
 
-        <OnPlatform
-            x:Key="OpenSansItalic"
-            x:TypeArguments="x:String"
-            Default="{OnPlatform Android='Fonts/OpenSansItalic.ttf#Open Sans',
-                                 iOS='OpenSans-Italic',
-                                 UWP='Assets/Fonts/OpenSansItalic.ttf#Open Sans'}" />
+            <OnPlatform
+                x:Key="OpenSansRegular"
+                x:TypeArguments="x:String"
+                Default="{OnPlatform Android='Fonts/OpenSansRegular.ttf#Open Sans',
+                                     iOS='OpenSans-Regular',
+                                     UWP='Assets/Fonts/OpenSansRegular.ttf#Open Sans'}" />
 
-        <Style TargetType="StackLayout">
-            <Setter Property="Spacing" Value="0" />
-        </Style>
+            <OnPlatform
+                x:Key="OpenSansBold"
+                x:TypeArguments="x:String"
+                Default="{OnPlatform Android='Fonts/OpenSansBold.ttf#Open Sans',
+                                     iOS='OpenSans-Bold',
+                                     UWP='Assets/Fonts/OpenSansBold.ttf#Open Sans'}" />
 
-        <Style TargetType="Grid">
-            <Setter Property="RowSpacing" Value="0" />
-            <Setter Property="ColumnSpacing" Value="0" />
-        </Style>
+            <OnPlatform
+                x:Key="OpenSansItalic"
+                x:TypeArguments="x:String"
+                Default="{OnPlatform Android='Fonts/OpenSansItalic.ttf#Open Sans',
+                                     iOS='OpenSans-Italic',
+                                     UWP='Assets/Fonts/OpenSansItalic.ttf#Open Sans'}" />
 
-        <Style TargetType="Frame">
-            <Setter Property="Padding" Value="0" />
-            <Setter Property="BackgroundColor" Value="Transparent" />
-        </Style>
+            <Style BaseResourceKey="BitButtonStyle" TargetType="Button">
+                <Style.Triggers>
+                    <Trigger TargetType="Button" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                    </Trigger>
+                    <Trigger TargetType="Button" Property="FontAttributes" Value="Italic">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                    </Trigger>
+                    <Trigger TargetType="Button" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style TargetType="Button">
-            <Setter Property="TextTransform" Value="None" />
-            <Style.Triggers>
-                <Trigger TargetType="Button" Property="FontAttributes" Value="Bold">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
-                </Trigger>
-                <Trigger TargetType="Button" Property="FontAttributes" Value="Italic">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
-                </Trigger>
-                <Trigger TargetType="Button" Property="FontAttributes" Value="None">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <Style BaseResourceKey="BitLabelStyle" TargetType="Label">
+                <Style.Triggers>
+                    <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                    </Trigger>
+                    <Trigger TargetType="Label" Property="FontAttributes" Value="Italic">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                    </Trigger>
+                    <Trigger TargetType="Label" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style TargetType="Label">
-            <Setter Property="TextTransform" Value="None" />
-            <Style.Triggers>
-                <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
-                </Trigger>
-                <Trigger TargetType="Label" Property="FontAttributes" Value="Italic">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
-                </Trigger>
-                <Trigger TargetType="Label" Property="FontAttributes" Value="None">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <Style BaseResourceKey="BitEntryStyle" TargetType="Entry">
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                    </Trigger>
+                    <Trigger TargetType="Entry" Property="FontAttributes" Value="Italic">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                    </Trigger>
+                    <Trigger TargetType="Entry" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style TargetType="Entry">
-            <Setter Property="TextTransform" Value="None" />
-            <Style.Triggers>
-                <Trigger TargetType="Entry" Property="FontAttributes" Value="Bold">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
-                </Trigger>
-                <Trigger TargetType="Entry" Property="FontAttributes" Value="Italic">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
-                </Trigger>
-                <Trigger TargetType="Entry" Property="FontAttributes" Value="None">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <Style BaseResourceKey="BitTimePickerStyle" TargetType="TimePicker">
+                <Style.Triggers>
+                    <Trigger TargetType="TimePicker" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                    </Trigger>
+                    <Trigger TargetType="TimePicker" Property="FontAttributes" Value="Italic">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                    </Trigger>
+                    <Trigger TargetType="TimePicker" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style TargetType="TimePicker">
-            <Setter Property="TextTransform" Value="None" />
-            <Style.Triggers>
-                <Trigger TargetType="TimePicker" Property="FontAttributes" Value="Bold">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
-                </Trigger>
-                <Trigger TargetType="TimePicker" Property="FontAttributes" Value="Italic">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
-                </Trigger>
-                <Trigger TargetType="TimePicker" Property="FontAttributes" Value="None">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <Style BaseResourceKey="BitDatePickerStyle" TargetType="DatePicker">
+                <Style.Triggers>
+                    <Trigger TargetType="DatePicker" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                    </Trigger>
+                    <Trigger TargetType="DatePicker" Property="FontAttributes" Value="Italic">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                    </Trigger>
+                    <Trigger TargetType="DatePicker" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style TargetType="DatePicker">
-            <Setter Property="TextTransform" Value="None" />
-            <Style.Triggers>
-                <Trigger TargetType="DatePicker" Property="FontAttributes" Value="Bold">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
-                </Trigger>
-                <Trigger TargetType="DatePicker" Property="FontAttributes" Value="Italic">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
-                </Trigger>
-                <Trigger TargetType="DatePicker" Property="FontAttributes" Value="None">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <Style BaseResourceKey="BitPickerStyle" TargetType="Picker">
+                <Style.Triggers>
+                    <Trigger TargetType="Picker" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                    </Trigger>
+                    <Trigger TargetType="Picker" Property="FontAttributes" Value="Italic">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                    </Trigger>
+                    <Trigger TargetType="Picker" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style TargetType="Picker">
-            <Setter Property="TextTransform" Value="None" />
-            <Style.Triggers>
-                <Trigger TargetType="Picker" Property="FontAttributes" Value="Bold">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
-                </Trigger>
-                <Trigger TargetType="Picker" Property="FontAttributes" Value="Italic">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
-                </Trigger>
-                <Trigger TargetType="Picker" Property="FontAttributes" Value="None">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <Style BaseResourceKey="BitSearchBarStyle" TargetType="SearchBar">
+                <Style.Triggers>
+                    <Trigger TargetType="SearchBar" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                    </Trigger>
+                    <Trigger TargetType="SearchBar" Property="FontAttributes" Value="Italic">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                    </Trigger>
+                    <Trigger TargetType="SearchBar" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style TargetType="SearchBar">
-            <Setter Property="TextTransform" Value="None" />
-            <Style.Triggers>
-                <Trigger TargetType="SearchBar" Property="FontAttributes" Value="Bold">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
-                </Trigger>
-                <Trigger TargetType="SearchBar" Property="FontAttributes" Value="Italic">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
-                </Trigger>
-                <Trigger TargetType="SearchBar" Property="FontAttributes" Value="None">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <Style BaseResourceKey="BitEditorStyle" TargetType="Editor">
+                <Style.Triggers>
+                    <Trigger TargetType="Editor" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                    </Trigger>
+                    <Trigger TargetType="Editor" Property="FontAttributes" Value="Italic">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                    </Trigger>
+                    <Trigger TargetType="Editor" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style TargetType="Editor">
-            <Setter Property="TextTransform" Value="None" />
-            <Style.Triggers>
-                <Trigger TargetType="Editor" Property="FontAttributes" Value="Bold">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
-                </Trigger>
-                <Trigger TargetType="Editor" Property="FontAttributes" Value="Italic">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
-                </Trigger>
-                <Trigger TargetType="Editor" Property="FontAttributes" Value="None">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+            <Style BaseResourceKey="BitSpanStyle" TargetType="Span">
+                <Style.Triggers>
+                    <Trigger TargetType="Span" Property="FontAttributes" Value="Bold">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                    </Trigger>
+                    <Trigger TargetType="Span" Property="FontAttributes" Value="Italic">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                    </Trigger>
+                    <Trigger TargetType="Span" Property="FontAttributes" Value="None">
+                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
 
-        <Style TargetType="Span">
-            <Setter Property="TextTransform" Value="None" />
-            <Style.Triggers>
-                <Trigger TargetType="Span" Property="FontAttributes" Value="Bold">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
-                </Trigger>
-                <Trigger TargetType="Span" Property="FontAttributes" Value="Italic">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
-                </Trigger>
-                <Trigger TargetType="Span" Property="FontAttributes" Value="None">
-                    <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
-                </Trigger>
-            </Style.Triggers>
-        </Style>
+        </ResourceDictionary>
 
     </Application.Resources>
 </bitPrism:BitApplication>
