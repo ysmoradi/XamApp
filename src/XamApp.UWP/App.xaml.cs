@@ -1,5 +1,5 @@
 ﻿using Bit.ViewModel;
-using Lottie.Forms.UWP.Renderers;
+using Lottie.Forms.Platforms.Uap;
 using Microsoft.AppCenter.Analytics;
 using Syncfusion.ListView.XForms.UWP;
 using System.Linq;

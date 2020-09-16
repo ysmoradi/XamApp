@@ -9,13 +9,12 @@
     <StackLayout Spacing="3">
 
         <lottie:AnimationView
-            Animation="{OnPlatform UWP='Assets/Animations/LottieLogo1.json',
-                                   Android='Animations/LottieLogo1.json',
-                                   iOS='Animations/LottieLogo1.json'}"
+            Animation="resource://Resources.Animations.LottieLogo1.json?assembly=XamApp"
+            AnimationSource="EmbeddedResource"
             AutoPlay="True"
             HeightRequest="500"
             HorizontalOptions="Center"
-            Loop="True"
+            RepeatMode="Infinite"
             VerticalOptions="Center"
             WidthRequest="500" />
 

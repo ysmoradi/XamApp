@@ -130,7 +130,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1269" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
+      <Version>6.2.10</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1364" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\XamApp\XamApp.csproj">
@@ -142,7 +145,6 @@
     <Content Include="Assets\Fonts\OpenSansBold.ttf" />
     <Content Include="Assets\Fonts\OpenSansItalic.ttf" />
     <Content Include="Assets\Fonts\OpenSansRegular.ttf" />
-    <Content Include="Assets\Animations\LottieLogo1.json" />
     <None Include="XamApp.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
