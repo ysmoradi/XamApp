@@ -16,9 +16,9 @@
 
 	<ItemGroup>
 		<PackageReference Include="Acr.UserDialogs" Version="7.1.0.454" />
-		<PackageReference Include="Bit.Client.Xamarin.Prism" Version="6.1.1" />
-		<PackageReference Include="Bit.Universal.Http" Version="6.1.0" />
-		<PackageReference Include="Bit.Tooling.CodeAnalyzer" Version="6.1.0" />
+		<PackageReference Include="Bit.Client.Xamarin.Prism" Version="6.2.0" />
+		<PackageReference Include="Bit.Universal.Http" Version="6.2.0" />
+		<PackageReference Include="Bit.Tooling.CodeAnalyzer" Version="6.2.0" />
 		<PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.4" />
 		<PackageReference Include="Fody" Version="6.2.6">
 			<PrivateAssets>all</PrivateAssets>
