@@ -29,9 +29,6 @@ namespace XamApp.Droid
 
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(SyncfusionLicense.Product_Key);
 
-            TabLayoutResource = Resource.Layout.Tabbar;
-            ToolbarResource = Resource.Layout.Toolbar;
-
             SetTheme(Resource.Style.MainTheme);
 
             base.OnCreate(savedInstanceState);
