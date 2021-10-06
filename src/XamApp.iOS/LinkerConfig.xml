@@ -1,7 +1,5 @@
 ﻿<linker>
 
-  <!-- Bit.CSharpClient.Data.EntityFrameworkCore -->
-
   <!--
   <assembly fullname="Microsoft.Data.Sqlite">
     <type fullname="*" />
@@ -19,15 +17,10 @@
   <assembly fullname="Microsoft.Extensions.Caching.Memory">
     <type fullname="*" />
   </assembly>
-  <assembly fullname="Bit.CSharpClient.Data.EntityFrameworkCore">
-    <type fullname="*" />
-  </assembly>
   <assembly fullname="Remotion.Linq">
     <type fullname="*" />
   </assembly>
   -->
-
-  <!-- Bit.CSharpClient.Prism -->
 
   <assembly fullname="Prism.Forms">
     <type fullname="*" />
@@ -44,46 +37,20 @@
   <assembly fullname="Autofac.Extensions.DependencyInjection">
     <type fullname="*" />
   </assembly>
-  <assembly fullname="Bit.CSharpClient.Prism">
-    <type fullname="*" />
-  </assembly>
-
-  <!-- Bit.CSharpClient.OData -->
 
   <!-- 
-  <assembly fullname="Bit.CSharpClient.OData">
-    <type fullname="*" />
-  </assembly>
   <assembly fullname="Simple.OData.Client.V4.Adapter">
     <type fullname="*" />
   </assembly>
   -->
 
-  <!-- Bit.CSharpClient.Sync -->
-
   <!-- 
-  <assembly fullname="Bit.CSharpClient.Sync">
-    <type fullname="*" />
-  </assembly>
   <assembly fullname="System.Linq.Dynamic">
     <type fullname="*" />
   </assembly>
   -->
 
-  <!-- Bit.CSharpClient.Rest -->
-
-  
-  <assembly fullname="Bit.CSharpClient.Rest">
-    <type fullname="*" />
-  </assembly>
-  
-  
-  <!-- Bit.CSharpClient.Controls -->
-
   <assembly fullname="Rg.Plugins.Popup">
-    <type fullname="*" />
-  </assembly>
-  <assembly fullname="Bit.CSharpClient.Controls">
     <type fullname="*" />
   </assembly>
   
@@ -116,8 +83,6 @@
     </type>
   </assembly>
   
-  <!-- Microsoft Extensions => For both Bit.CSharpClient.Rest and Bit.CSharpClient.Data.EntityFrameworkCore -->
-
   <assembly fullname="Microsoft.Extensions.Http">
     <type fullname="*" />
   </assembly>

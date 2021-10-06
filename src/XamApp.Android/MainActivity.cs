@@ -4,10 +4,12 @@ using Android.Content.PM;
 using Android.OS;
 using Autofac;
 using Bit.Android;
+using Bit.Core.Contracts;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.Extensions.DependencyInjection;
 using Prism.Autofac;
 using Prism.Ioc;
 using XamApp.Contracts;
@@ -48,15 +50,13 @@ namespace XamApp.Droid
         {
         }
 
-        public override void RegisterTypes(IContainerRegistry containerRegistry)
+        public override void RegisterTypes(IDependencyManager dependencyManager, IContainerRegistry containerRegistry, ContainerBuilder containerBuilder, IServiceCollection services)
         {
-            ContainerBuilder containerBuilder = containerRegistry.GetBuilder();
-
             containerBuilder.RegisterType<AndroidAppVersionService>()
                 .As<IAppVersionService>()
                 .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues);
 
-            base.RegisterTypes(containerRegistry);
+            base.RegisterTypes(dependencyManager, containerRegistry, containerBuilder, services);
         }
     }
 }

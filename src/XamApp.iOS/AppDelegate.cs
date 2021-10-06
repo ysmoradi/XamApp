@@ -1,10 +1,12 @@
 ﻿using Autofac;
+using Bit.Core.Contracts;
 using Bit.iOS;
 using Bit.ViewModel;
 using Bit.ViewModel.Implementations;
 using Foundation;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Microsoft.Extensions.DependencyInjection;
 using Prism.Autofac;
 using Prism.Ioc;
 using Syncfusion.ListView.XForms.iOS;
@@ -41,15 +43,13 @@ namespace XamApp.iOS
 
     public class XamAppPlatformInitializer : BitPlatformInitializer
     {
-        public override void RegisterTypes(IContainerRegistry containerRegistry)
+        public override void RegisterTypes(IDependencyManager dependencyManager, IContainerRegistry containerRegistry, ContainerBuilder containerBuilder, IServiceCollection services)
         {
-            ContainerBuilder containerBuilder = containerRegistry.GetBuilder();
-
             containerBuilder.RegisterType<iOSAppVersionService>()
                 .As<IAppVersionService>()
                 .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues);
 
-            base.RegisterTypes(containerRegistry);
+            base.RegisterTypes(dependencyManager, containerRegistry, containerBuilder, services);
         }
     }
 }

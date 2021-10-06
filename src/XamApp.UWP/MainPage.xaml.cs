@@ -1,5 +1,7 @@
 ﻿using Autofac;
+using Bit.Core.Contracts;
 using Bit.ViewModel.Implementations;
+using Microsoft.Extensions.DependencyInjection;
 using Prism.Autofac;
 using Prism.Ioc;
 using Syncfusion.ListView.XForms.UWP;
@@ -22,15 +24,13 @@ namespace XamApp.UWP
 
     public class XamAppPlatformInitializer : BitPlatformInitializer
     {
-        public override void RegisterTypes(IContainerRegistry containerRegistry)
+        public override void RegisterTypes(IDependencyManager dependencyManager, IContainerRegistry containerRegistry, ContainerBuilder containerBuilder, IServiceCollection services)
         {
-            ContainerBuilder containerBuilder = containerRegistry.GetBuilder();
-
             containerBuilder.RegisterType<UWPAppVersionService>()
                 .As<IAppVersionService>()
                 .PropertiesAutowired(PropertyWiringOptions.PreserveSetValues);
 
-            base.RegisterTypes(containerRegistry);
+            base.RegisterTypes(dependencyManager, containerRegistry, containerBuilder, services);
         }
     }
 }
