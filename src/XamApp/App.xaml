@@ -4,7 +4,7 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:bit="https://bitframework.com"
-    xmlns:bitPrism="clr-namespace:Bit;assembly=Bit.CSharpClient.Prism">
+    xmlns:bitPrism="clr-namespace:Bit;assembly=Bit.Client.Xamarin.Prism">
 
     <Application.Resources>
 
