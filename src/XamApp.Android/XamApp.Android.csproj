@@ -30,7 +30,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidSupportedAbis>armeabi-v7a;x86</AndroidSupportedAbis>
+    <AndroidSupportedAbis>
+    </AndroidSupportedAbis>
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <LangVersion>7.2</LangVersion>
@@ -71,7 +72,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2291" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.2337" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Implementations\AndroidAppVersionService.cs" />
