@@ -11,6 +11,7 @@ using Microsoft.Extensions.Logging;
 using Prism;
 using Prism.Ioc;
 using System.Globalization;
+using System.Threading;
 using System.Threading.Tasks;
 using XamApp.Resources;
 using XamApp.ViewModels;
@@ -44,9 +45,16 @@ namespace XamApp
         {
             InitializeComponent();
 
-            Strings.Culture = CultureInfo.CurrentUICulture = new CultureInfo("en");
+            Strings.Culture =
+                CultureInfo.CurrentUICulture =
+                CultureInfo.CurrentCulture =
+                Thread.CurrentThread.CurrentUICulture =
+                Thread.CurrentThread.CurrentCulture =
+                CultureInfo.DefaultThreadCurrentUICulture =
+                CultureInfo.DefaultThreadCurrentCulture =
+                new CultureInfo("fa");
 
-            await NavigationService.NavigateAsync("/Nav/HelloWorld"); // Simple tap counter sample
+            await NavigationService.NavigateAsync("/Nav/HelloWorldMultiLanguage"); // Simple tap counter sample
 
             // await NavigationService.NavigateAsync("/MasterDetail/Nav/HelloWorld"); // Simple tap counter sample in master detail
             // await NavigationService.NavigateAsync("/Nav/HelloWorld/Intro"); // Popup page
