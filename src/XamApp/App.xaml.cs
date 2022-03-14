@@ -43,8 +43,6 @@ namespace XamApp
 
         protected override async Task OnInitializedAsync()
         {
-            InitializeComponent();
-
             Strings.Culture =
                 CultureInfo.CurrentUICulture =
                 CultureInfo.CurrentCulture =
@@ -52,7 +50,11 @@ namespace XamApp
                 Thread.CurrentThread.CurrentCulture =
                 CultureInfo.DefaultThreadCurrentUICulture =
                 CultureInfo.DefaultThreadCurrentCulture =
-                new CultureInfo("fa");
+                new CultureInfo("en");
+
+            InitializeComponent();
+
+            
 
             await NavigationService.NavigateAsync("/Nav/HelloWorldMultiLanguage"); // Simple tap counter sample
 
