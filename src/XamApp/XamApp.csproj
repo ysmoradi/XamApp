@@ -13,6 +13,7 @@
 
 	<ItemGroup>
 		<EmbeddedResource Include="Resources\Animations\*.json" />
+		<EmbeddedResource Include="Resources\Fonts\*.*" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -20,7 +21,7 @@
 		<PackageReference Include="Bit.Client.Xamarin.Prism" Version="9.0.0" />
 		<PackageReference Include="Bit.Universal.Http" Version="9.0.0" />
 		<PackageReference Include="Bit.Tooling.CodeAnalyzer" Version="9.0.0" />
-		<PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.1.0" />
+		<PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="4.0.11" />
 		<PackageReference Include="Fody" Version="6.6.0">
 			<PrivateAssets>all</PrivateAssets>
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>

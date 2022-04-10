@@ -143,9 +143,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\Fonts\OpenSansBold.ttf" />
-    <Content Include="Assets\Fonts\OpenSansItalic.ttf" />
-    <Content Include="Assets\Fonts\OpenSansRegular.ttf" />
     <None Include="XamApp.UWP_TemporaryKey.pfx" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">

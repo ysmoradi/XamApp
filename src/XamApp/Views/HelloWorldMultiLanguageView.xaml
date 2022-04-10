@@ -4,9 +4,17 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:resx="clr-namespace:XamApp.Resources"
-    Title="{x:Static resx:Strings.HelloWorld}">
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+    xmlns:vm="clr-namespace:XamApp.ViewModels"
+    Title="{x:Static resx:Strings.HelloWorld}"
+    x:DataType="vm:HelloWorldMultiLanguageViewModel">
+    <StackLayout
+        HorizontalOptions="Center"
+        Spacing="5"
+        VerticalOptions="Center">
         <Label Text="{Binding StepsCount, StringFormat={x:Static resx:Strings.ButtonTappedCount}}" />
         <Button Command="{Binding IncreaseStepsCountCommand}" Text="+" />
+        <Label Text="{Binding DateSample, StringFormat='{}{0:MMMM dd}'}" />
+        <Button Command="{Binding SetCurrentCultureToFaCommand}" Text="Set current culture to fa" />
+        <Button Command="{Binding SetCurrentCultureToEnCommand}" Text="Set current culture to en" />
     </StackLayout>
 </ContentPage>

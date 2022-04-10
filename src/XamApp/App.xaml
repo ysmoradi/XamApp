@@ -14,37 +14,26 @@
                 <bit:BitGlobalStyles />
             </ResourceDictionary.MergedDictionaries>
 
-            <OnPlatform
-                x:Key="OpenSansRegular"
-                x:TypeArguments="x:String"
-                Default="{OnPlatform Android='Fonts/OpenSansRegular.ttf#Open Sans',
-                                     iOS='OpenSans-Regular',
-                                     UWP='Assets/Fonts/OpenSansRegular.ttf#Open Sans'}" />
+            <x:String x:Key="AppRegularFont">OpenSansRegular</x:String>
+            <x:String x:Key="AppBoldFont">OpenSansBold</x:String>
+            <x:String x:Key="AppItalicFont">OpenSansItalic</x:String>
 
-            <OnPlatform
-                x:Key="OpenSansBold"
-                x:TypeArguments="x:String"
-                Default="{OnPlatform Android='Fonts/OpenSansBold.ttf#Open Sans',
-                                     iOS='OpenSans-Bold',
-                                     UWP='Assets/Fonts/OpenSansBold.ttf#Open Sans'}" />
+            <FlowDirection x:Key="AppFlowDirection">LeftToRight</FlowDirection>
 
-            <OnPlatform
-                x:Key="OpenSansItalic"
-                x:TypeArguments="x:String"
-                Default="{OnPlatform Android='Fonts/OpenSansItalic.ttf#Open Sans',
-                                     iOS='OpenSans-Italic',
-                                     UWP='Assets/Fonts/OpenSansItalic.ttf#Open Sans'}" />
+            <Style ApplyToDerivedTypes="True" TargetType="Page">
+                <Setter Property="FlowDirection" Value="{DynamicResource AppFlowDirection}" />
+            </Style>
 
             <Style BaseResourceKey="BitButtonStyle" TargetType="Button">
                 <Style.Triggers>
                     <Trigger TargetType="Button" Property="FontAttributes" Value="Bold">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppBoldFont}" />
                     </Trigger>
                     <Trigger TargetType="Button" Property="FontAttributes" Value="Italic">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppItalicFont}" />
                     </Trigger>
                     <Trigger TargetType="Button" Property="FontAttributes" Value="None">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppRegularFont}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -52,13 +41,13 @@
             <Style BaseResourceKey="BitLabelStyle" TargetType="Label">
                 <Style.Triggers>
                     <Trigger TargetType="Label" Property="FontAttributes" Value="Bold">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppBoldFont}" />
                     </Trigger>
                     <Trigger TargetType="Label" Property="FontAttributes" Value="Italic">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppItalicFont}" />
                     </Trigger>
                     <Trigger TargetType="Label" Property="FontAttributes" Value="None">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppRegularFont}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -66,13 +55,13 @@
             <Style BaseResourceKey="BitEntryStyle" TargetType="Entry">
                 <Style.Triggers>
                     <Trigger TargetType="Entry" Property="FontAttributes" Value="Bold">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppBoldFont}" />
                     </Trigger>
                     <Trigger TargetType="Entry" Property="FontAttributes" Value="Italic">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppItalicFont}" />
                     </Trigger>
                     <Trigger TargetType="Entry" Property="FontAttributes" Value="None">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppRegularFont}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -80,13 +69,13 @@
             <Style BaseResourceKey="BitTimePickerStyle" TargetType="TimePicker">
                 <Style.Triggers>
                     <Trigger TargetType="TimePicker" Property="FontAttributes" Value="Bold">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppBoldFont}" />
                     </Trigger>
                     <Trigger TargetType="TimePicker" Property="FontAttributes" Value="Italic">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppItalicFont}" />
                     </Trigger>
                     <Trigger TargetType="TimePicker" Property="FontAttributes" Value="None">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppRegularFont}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -94,13 +83,13 @@
             <Style BaseResourceKey="BitDatePickerStyle" TargetType="DatePicker">
                 <Style.Triggers>
                     <Trigger TargetType="DatePicker" Property="FontAttributes" Value="Bold">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppBoldFont}" />
                     </Trigger>
                     <Trigger TargetType="DatePicker" Property="FontAttributes" Value="Italic">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppItalicFont}" />
                     </Trigger>
                     <Trigger TargetType="DatePicker" Property="FontAttributes" Value="None">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppRegularFont}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -108,13 +97,13 @@
             <Style BaseResourceKey="BitPickerStyle" TargetType="Picker">
                 <Style.Triggers>
                     <Trigger TargetType="Picker" Property="FontAttributes" Value="Bold">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppBoldFont}" />
                     </Trigger>
                     <Trigger TargetType="Picker" Property="FontAttributes" Value="Italic">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppItalicFont}" />
                     </Trigger>
                     <Trigger TargetType="Picker" Property="FontAttributes" Value="None">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppRegularFont}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -122,13 +111,13 @@
             <Style BaseResourceKey="BitSearchBarStyle" TargetType="SearchBar">
                 <Style.Triggers>
                     <Trigger TargetType="SearchBar" Property="FontAttributes" Value="Bold">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppBoldFont}" />
                     </Trigger>
                     <Trigger TargetType="SearchBar" Property="FontAttributes" Value="Italic">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppItalicFont}" />
                     </Trigger>
                     <Trigger TargetType="SearchBar" Property="FontAttributes" Value="None">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppRegularFont}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -136,13 +125,13 @@
             <Style BaseResourceKey="BitEditorStyle" TargetType="Editor">
                 <Style.Triggers>
                     <Trigger TargetType="Editor" Property="FontAttributes" Value="Bold">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppBoldFont}" />
                     </Trigger>
                     <Trigger TargetType="Editor" Property="FontAttributes" Value="Italic">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppItalicFont}" />
                     </Trigger>
                     <Trigger TargetType="Editor" Property="FontAttributes" Value="None">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppRegularFont}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>
@@ -150,13 +139,13 @@
             <Style BaseResourceKey="BitSpanStyle" TargetType="Span">
                 <Style.Triggers>
                     <Trigger TargetType="Span" Property="FontAttributes" Value="Bold">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansBold}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppBoldFont}" />
                     </Trigger>
                     <Trigger TargetType="Span" Property="FontAttributes" Value="Italic">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansItalic}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppItalicFont}" />
                     </Trigger>
                     <Trigger TargetType="Span" Property="FontAttributes" Value="None">
-                        <Setter Property="FontFamily" Value="{StaticResource OpenSansRegular}" />
+                        <Setter Property="FontFamily" Value="{DynamicResource AppRegularFont}" />
                     </Trigger>
                 </Style.Triggers>
             </Style>

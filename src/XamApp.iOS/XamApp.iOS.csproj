@@ -89,15 +89,6 @@
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <Compile Include="Renderers\XamAppEntryRenderer.cs" />
-    <BundleResource Include="..\XamApp.UWP\Assets\Fonts\OpenSansBold.ttf">
-      <Link>Resources\Fonts\OpenSansBold.ttf</Link>
-    </BundleResource>
-    <BundleResource Include="..\XamApp.UWP\Assets\Fonts\OpenSansItalic.ttf">
-      <Link>Resources\Fonts\OpenSansItalic.ttf</Link>
-    </BundleResource>
-    <BundleResource Include="..\XamApp.UWP\Assets\Fonts\OpenSansRegular.ttf">
-      <Link>Resources\Fonts\OpenSansRegular.ttf</Link>
-    </BundleResource>
     <None Include="Entitlements.plist" />
     <None Include="Info.plist">
       <SubType>Designer</SubType>
